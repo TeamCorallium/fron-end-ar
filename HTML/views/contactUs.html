@@ -1,0 +1,97 @@
+<div class="main-content padding-top-50 padding-bottom-0" ng-controller="ContactUsCtrl">
+    <div class="BoxXsWidth">
+        <img class="pictureExploreUser" ng-src="HTML/assets/images/contact.jpg" />
+        <h2 class="text-center textPictureExploreUsers col-xs-12" translate="contact.TITLE"></h2>
+        <p class="text-center font-size-15 textPictureExploreUsersSeconds col-xs-12 hidden-xs" translate="contact.SUB_TITLE"></p>
+    </div>
+    <section class="container-fluid container-fullw bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="alert alert-success hidden" id="contactSuccess" translate="contact.SEND_SUCCESS"></div>
+                    <div class="alert alert-error hidden" id="contactError" translate="contact.SEND_ERROR"></div>
+                    <h2 translate="contact.CONTACT_US"></h2>
+                    <form name="contactUsForm" role="form" ng-controller="FormController">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for="emailHome" translate="contact.EMAIL">
+                                        <span class="symbol required"></span>
+                                    </label>
+                                    <div id="errorEmailEmptyBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <div ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" class="error form-hint" ng-cloak translate="contact.EMAIL_INVALID"></div>
+                                    <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'contact.EMAIL' | translate }}" ng-required="true" ng-model="message.email"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-10">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for="subject" translate="contact.SUBJECT">
+                                        <span class="symbol required"></span>
+                                    </label>
+                                    <div id="errorSubjectBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''" id="subject" name="subject" placeholder="{{ 'contact.SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.subject"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-10">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for="body" translate="contact.MESSAGE">
+                                        <span class="symbol required"></span>
+                                    </label>
+                                    <div id="errorBodyBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <textarea class="form-control resize-none" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body"
+                                        required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-10">
+                            <div class="col-md-12">
+                                <a class="btn btn-primary ButtonRadius" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid">
+                                    <i class="ti-arrow-right"></i>
+                                    <span class="pointerHover" translate="contact.SEND_MESSAGE"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 marginTopMovil">
+                    <!-- <h4 translate="contact.GET_IN_TOUCH"></h4>
+                    <p translate="contact.GET_IN_TOUCH_SUB"></p>
+                    <hr> -->
+                    <h4 translate="contact.THE_OFFICE"></h4>
+                    <ul class="list-unstyled">
+                        <li class="margin-bottom-5" translate="contact.ADDRESS">
+                            <i class="icon icon-map-marker"></i>
+                        </li>
+                        <li class="margin-bottom-5">
+                            <i class="icon icon-phone"></i>
+                            <a class="colorTextContact" href="tel:+8618217296762" translate="contact.PHONE"></a>
+                        </li>
+                        <li>
+                            <i class="icon icon-envelope"></i>
+                            <a class="colorTextContact" href="mailto:manager@dirstuff.com" translate="contact.EMAIL_DATE"> </a>
+                        </li>
+                    </ul>
+                    <hr class="right">
+                    <h4 translate="contact.HOURS"></h4>
+                    <ul class="list-unstyled">
+                        <li translate="contact.WEEK">
+                            <i class="icon icon-time"></i>
+                        </li>
+                        <li translate="contact.SATURDAY">
+                            <i class="icon icon-time"></i>
+                        </li>
+                        <li translate="contact.SUNDAY">
+                            <i class="icon icon-time"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,176 @@
+<div class="profile-padding-view background-light" ng-controller="ExploreUsersCtrl">
+    <div class="BoxXsWidth">
+        <img class="pictureExploreUser" ng-src="HTML/assets/images/exploreusers.jpg" />
+        <h2 class="text-center textPictureExploreUsers col-xs-12" translate="explore_user.EXPLORE_PROFILES"></h2>
+        <!-- <p class="text-center font-size-15 textPictureExploreUsersSeconds col-xs-12 hidden-xs" translate="explore_user.EXPLORE_PROFILES"></p> -->
+    </div>
+    <section class="padding-top-40 styleBoxConfiguration container-fluid container-fullw bg-white padding-top-10 padding-bottom-0 backgroundGray">
+        <div class="row">
+            <div class="paddingStyleUserExplore">
+                <div class="col-lg-2 col-md-3 col-sm-4 hidden-xs">
+                    <fieldset class="margin-top-0">
+                        <legend translate="explore_user.FILTERS"></legend>
+                        <div class="form-group centerTextExploreUser">
+                            <div class="checkbox">
+                                <label>
+                                    <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterMD" ng-checked="applyScoreFilter" ng-model="applyScoreFilter">
+                                    <strong translate="explore_user.ORDER_BY_SCORE"></strong>
+                                </label>
+                            </div>
+                            <div class="clip-radio radio-primary">
+                                <input ng-model="orderScore" type="radio" id="upScoreMD" name="upScoreMD" value="AscendingScore" checked="checked">
+                                <label for="upScoreMD" translate="explore_user.ASCENDING"></label>
+                                <input ng-model="orderScore" type="radio" id="downScoreMD" name="downScoreMD" value="DescendingScore">
+                                <label for="downScoreMD" translate="explore_user.DESCENDING"></label>
+                            </div>
+                        </div>
+                        <div class="form-group centerTextExploreUser">
+                            <div class="checkbox">
+                                <label>
+                                    <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterMD" ng-checked="applyDateFilter" ng-model="applyDateFilter">
+                                    <strong translate="explore_user.ORDER_BY_DATE"></strong>
+                                </label>
+                            </div>
+                            <div class="clip-radio radio-primary">
+                                <input ng-model="orderDate" type="radio" id="upDateMD" name="upDateMD" value="AscendingDate" checked="checked">
+                                <label for="upDateMD" translate="explore_user.ASCENDING"></label>
+                                <input ng-model="orderDate" type="radio" id="downDateMD" name="downDateMD" value="DescendingDate">
+                                <label for="downDateMD" translate="explore_user.DESCENDING"></label>
+                            </div>
+                        </div>
+                        <div class="form-group centerTextExploreUser">
+                            <div class="checkbox">
+                                <label>
+                                    <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterMD" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
+                                    <strong translate="explore_user.ORDER_BY_RATING"></strong>
+                                </label>
+                            </div>
+                            <div class="clip-radio radio-primary">
+                                <input ng-model="orderRating" type="radio" id="upRatingMD" name="upRatingMD" value="AscendingRating" checked="checked">
+                                <label for="upRatingMD" translate="explore_user.ASCENDING"></label>
+                                <input ng-model="orderRating" type="radio" id="downRatingMD" name="downRatingMD" value="DescendingRating">
+                                <label for="downRatingMD" translate="explore_user.DESCENDING"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a type="button" class="btn btn-primary col-md-12 pull-right" ng-click="changeFiltres()">
+                                <label class="textColorWhite margin-bottom-0 pointerHover" translate="explore_user.APPLY"></label>
+                            </a>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                    <div data-uib-accordion>
+                        <div data-uib-accordion-group class="panel-default" is-open="status.open">
+                            <div data-uib-accordion-heading>
+                                <label class="margin-bottom-0 pointerHover" translate="explore_user.FILTERS"></label>
+                                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </div>
+                            <div class="form-group centerTextExploreUser">
+                                <div class="checkbox">
+                                    <label>
+                                        <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterXS" ng-checked="applyScoreFilter" ng-model="applyScoreFilter">
+                                        <strong translate="explore_user.ORDER_BY_SCORE"></strong>
+                                    </label>
+                                </div>
+                                <div class="clip-radio radio-primary">
+                                    <input ng-change="changeScore()" ng-model="orderScore" type="radio" id="upScore" name="upScore" value="AscendingScore" checked="checked">
+                                    <label for="upScore" translate="explore_user.ASCENDING"></label>
+                                    <input ng-change="changeScore()" ng-model="orderScore" type="radio" id="downScore" name="downScore" value="DescendingScore">
+                                    <label for="downScore" translate="explore_user.DESCENDING"></label>
+                                </div>
+                            </div>
+                            <div class="form-group centerTextExploreUser">
+                                <div class="checkbox">
+                                    <label>
+                                        <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterXS" ng-checked="applyDateFilter" ng-model="applyDateFilter">
+                                        <strong translate="explore_user.ORDER_BY_DATE"></strong>
+                                    </label>
+                                </div>
+                                <div class="clip-radio radio-primary">
+                                    <input ng-change="changeDate()" ng-model="orderDate" type="radio" id="upDate" name="upDate" value="AscendingDate" checked="checked">
+                                    <label for="upDate" translate="explore_user.ASCENDING"></label>
+                                    <input ng-change="changeDate()" ng-model="orderDate" type="radio" id="downDate" name="downDate" value="DescendingDate">
+                                    <label for="downDate" translate="explore_user.DESCENDING"></label>
+                                </div>
+                            </div>
+                            <div class="form-group centerTextExploreUser">
+                                <div class="checkbox">
+                                    <label>
+                                        <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterXS" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
+                                        <strong translate="explore_user.ORDER_BY_RATING"></strong>
+                                    </label>
+                                </div>
+                                <div class="clip-radio radio-primary">
+                                    <input ng-change="changeRating()" ng-model="orderRating" type="radio" id="upRating" name="upRating" value="AscendingRating">
+                                    <label for="upRating" translate="explore_user.ASCENDING"></label>
+                                    <input ng-change="changeRating()" ng-model="orderRating" type="radio" id="downRating" name="downRating" value="DescendingRating">
+                                    <label for="downRating" translate="explore_user.DESCENDING"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <a type="button" class="btn btn-primary col-xs-12 pull-right" ng-click="changeFiltres()">
+                                    <label class="textColorWhite margin-bottom-0 pointerHover" translate="explore_user.APPLY"></label>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 paddingBottom60">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0">
+                        <div class="input-group well marginSearch">
+                            <input class="form-control" placeholder="{{ 'explore_user.SEARCH' | translate }}" type="text" id="searchInput" ng-model="search">
+                            <span class="input-group-btn">
+                            <a class="btn btn-primary" type="button" ng-click="searchProfile()">
+                                <i class="ti-search"></i>
+                                <label class="textColorWhite margin-bottom-0" translate="explore_user.SEARCH"></label>
+                            </a>
+                        </span>
+                        </div>
+                        <div data-appears-group-delay="0" data-appears-delay-increase="200">
+                            <ul class="team-list list-unstyled">
+                                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles">
+                                    <div class="styleBox marginExploreUser">
+                                        <img ng-show="profile.confVisible" class="IconSnippet iconEyeHome" ng-src="HTML/assets/images/visible.png"></img>
+                                        <img ng-hide="profile.confVisible" class="IconSnippet iconEyeHome" ng-src="HTML/assets/images/hide.png"></img>
+                                        <div class="imageBoxHome backgroundWhite border-radius50">
+                                            <img ng-src="{{profile.avatar}}" class="img-circle imgProfile pointerHover" ng-click="goToProfile(profile.owner)" />
+                                        </div>
+                                        <div class="col-xs-12 center padding-left-10 padding-right-10">
+                                            <h3 class="margin-top-10" ng-hide="profile.fullname == ''">{{profile.showFullname | htmlToPlaintext | words:2 :true}}</h3>
+                                            <h3 class="margin-top-10" ng-show="profile.fullname == ''">@{{profile.showOwner}}</h3>
+                                            <p class="text-dark">
+                                                {{profile.info | htmlToPlaintext | words:10 :true}}
+                                            </p>
+                                        </div>
+                                        <div class="buttonContainer">
+                                            <a class="btn btn-primary" ng-click="goToProfile(profile.owner)" translate="explore_user.SEE_PROFILE"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0" ng-hide="profiles.length < 12 && currentPage == 1">
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" ng-if="profiles.length > 0">
+                            <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
+                                <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
+                                    <a ng-click="previous()" class="ng-binding border-radius6" translate="explore_user.PREVIOUS"></a>
+                                </li>
+                                <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
+                                    <a ng-click="next()" class="ng-binding border-radius6" translate="explore_user.NEXT"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    jQuery(document).ready(function() {
+        Main.init();
+    });
+</script>

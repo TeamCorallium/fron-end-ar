@@ -1,0 +1,268 @@
+<div class="profile-padding-configuration" ng-controller="NotificationsCtrl">
+    <div id="HintSocialNetwork">
+        <p class="SocialHoverText">{{SocialActive}}</p>
+    </div>
+    <div class="BoxXsWidth">
+        <img class="pictureExploreUser" ng-src="{{userdata.cover}}" />
+    </div>
+    <div class="row backgroundWhite">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+            <div class="col-xs-12">
+                <div class="AvatarXSBox">
+                    <img ng-show="!EditInfoFlag" ng-src="{{user.avatar}}" class="img-circle avatarXS" />
+                    <input ng-show="EditInfoFlag" type="image" ng-src="{{user.avatar}}" class="img-circle avatarXS" data-toggle="modal" data-target="#ModalImageCropper">
+                </div>
+                <div class="UserInfoBox">
+                    <h4 class="padding-0 margin-top-10">
+                        <strong>{{user.fullname}}</strong>
+                    </h4>
+                    <h5 class="padding-0">@{{user.showUsername}}</h5>
+                </div>
+                <div class="col-xs-12">
+                    <h5 class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
+                    <a ng-show="user.email != ''" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                        <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
+                    </a>
+                    <a ng-show="user.phone != ''" class="col-xs-12 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                        <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
+                    </a>
+                </div>
+                <div class="col-xs-11 marginLeft5 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
+                    <span class="col-xs-6 padding-left-0" ng-cloak>
+                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                    </span>
+                    <div class="col-xs-6 padding-left-0 padding-right-0">
+                        <span class="stars">
+                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <nav class="nav navbar-default ColorNavBar">
+                <ul class="list-inline SocialIcon list-unstyled">
+                    <li id="SocialBox">
+                        <ul class="list-inline SocialIcon list-unstyled margin-left-0 displayInlineFlex" ng-class="{HiddenIfXS: user.socialnetworks.length <= 0}">
+                            <li ng-repeat="sn in user.socialnetworks" class="padding-5">
+                                <a type="button" ng-mouseover="mouseOverSocial(sn.name, $event)" ng-mouseleave="mouseLeaveSocial()" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                                    <i class="{{sn.type}}"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="container-fluid container-fullw bg-white padding-top-10 paddingBottom60 backgroundGray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="testimonial-container col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10 padding-left-0 padding-right-0">
+                            <div class="image_middle backgroundWhite border-radius50">
+                                <img ng-src="{{user.avatar}}" class="img-circle hidden-xs imgProfile" />
+                            </div>
+                            <div class="UserInfoBox hidden-xs">
+                                <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10" ng-show="user.fullname != ''">
+                                    <strong>{{user.fullname}}</strong>
+                                </h4>
+                                <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.showUsername}}</h4>
+                                <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
+                                </h5>
+                                <a ng-show="user.email != '' && showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail">
+                                    <p class="margin-bottom-0 col-sm-11 col-md-11 col-lg-11 padding-left-10 pull-right">{{showEmail}}
+                                        <span class="showTextHover">{{user.email}}</span>
+                                    </p>
+                                </a>
+                                <a ng-show="user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
+                                </a>
+                                <a ng-show="user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                                    <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
+                                </a>
+                                <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
+                                    <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
+                                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                                    </span>
+                                    <div class="col-md-7 padding-left-0 padding-right-0">
+                                        <span class="stars">
+                                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
+                                <a type="button" ng-click="makeQRCode()" ng-show="user.qrcode == ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-settings ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span translate="user_profile.GENERATE_QR"></span>
+                                </a>
+                            </div>
+                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
+                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="borderQR padding-15 col-xs-12" />
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12 padding-0 margin-top-10" ng-show="user.qrcode != ''">
+                                    <a type="button" ng-click="makeQRCode()" class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <i class="ti-reload"></i>
+                                    </a>
+                                    <a type="button" href="{{user.qrcode}}" download class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right">
+                                        <i class="ti-save"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyleNotifications">
+                            <ul class="post-list">
+                                <li class="borderBottomNone" ng-repeat="notification in notifications">
+                                    <div ng-show="notification.type == 'newfollower'" class="padding-right-0 col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                        <div class="post-image padding-bottom-10">
+                                            <div class="img-thumbnail">
+                                                <img ng-src="{{notification.profileAvatar}}">
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <div class="btn-group pull-right DropdownMargin">
+                                                <button ng-click="deleteNotification(notification.url)" type="button" class="btn btn-o dropdown-toggle">
+                                                    <span class="ti-trash"></span>
+                                                </button>
+                                            </div>
+                                            <div class="padding-left-0 padding-right-0 font-size-15">
+                                                <h5 class="margin-bottom-0">{{notification.profileFullName}}</h5>
+                                                <!-- <h5 class="margin-bottom-0" translate="notifications.FOLLOW_YOU"></h5> -->
+                                            </div>
+                                            <span class="block text-light margin-top-3 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <img class="widthheight15" ng-src="HTML/assets/images/follow.png">
+                                                <label class="margin-bottom-0 margin-left-7" translate="notifications.FOLLOW_YOU"></label>
+                                            </span>
+                                            <span class="block text-light margin-top-3 margin-bottom-10 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <i class="ti-time margin-right-10"></i>
+                                                {{notification.created | timeago}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div ng-show="notification.type == 'newSnippet'" class="padding-right-0 col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                        <div class="post-image padding-bottom-10">
+                                            <div class="img-thumbnail">
+                                                <img ng-src="{{notification.profileAvatar}}">
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <div class="btn-group pull-right DropdownMargin">
+                                                <button ng-click="deleteNotification(notification.url)" type="button" class="btn btn-o dropdown-toggle">
+                                                    <span class="ti-trash"></span>
+                                                </button>
+                                            </div>
+                                            <div class="padding-left-0 padding-right-0 font-size-15">
+                                                <h5 class="margin-bottom-0">{{notification.profileFullName}}</h5>
+                                            </div>
+                                            <span class="block text-light margin-top-3 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <img class="widthheight15" ng-src="HTML/assets/images/snippet.png"></img>
+                                                <label class="margin-bottom-0 margin-left-7" translate="notifications.NEW_SNIPPET"></label>
+                                            </span>
+                                            <span class="block text-light margin-top-3 margin-bottom-10 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <i class="ti-time margin-right-10"></i>
+                                                {{notification.created | timeago}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div ng-show="notification.type == 'newSocialNetwork'" class="padding-right-0 col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                        <div class="post-image padding-bottom-10">
+                                            <div class="img-thumbnail">
+                                                <img ng-src="{{notification.profileAvatar}}">
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <div class="btn-group pull-right DropdownMargin">
+                                                <button ng-click="deleteNotification(notification.url)" type="button" class="btn btn-o dropdown-toggle">
+                                                    <span class="ti-trash"></span>
+                                                </button>
+                                            </div>
+                                            <div class="padding-left-0 padding-right-0 font-size-15">
+                                                <h5 class="margin-bottom-0">{{notification.profileFullName}}</h5>
+                                            </div>
+                                            <span class="block text-light margin-top-3 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <img class="widthheight15" ng-src="HTML/assets/images/networks.png">
+                                                <label class="margin-bottom-0 margin-left-7" translate="notifications.ADD_SOCIAL"></label>
+                                            </span>
+                                            <span class="block text-light margin-top-3 margin-bottom-10 col-xs-8 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <i class="ti-time margin-right-10"></i>
+                                                {{notification.created | timeago}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS hidden-xs">
+                    <div class="paddingViewProfile">
+                        <aside class="sidebar">
+                            <div class="tabbable">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs nav-justified">
+                                        <li class="active">
+                                            <a data-toggle="tab">
+                                                <img class="IconPopular" ng-src="HTML/assets/images/popular.png"></img>
+                                                <label translate="user_profile.POPULAR_USER"></label>
+                                            </a>
+                                            <hr class="tall margin-0">
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="popularUsers">
+                                            <ul class="post-list">
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
+                                                    <div class="post-image">
+                                                        <div class="img-thumbnail">
+                                                            <a ng-disabled="!popularUser.configVisible" ng-click="goToProfile(popularUser.owner)">
+                                                                <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-info">
+                                                        <a ng-disabled="!popularUser.configVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    </div>
+                                                </li>
+                                                <!-- <li class="ListMoreUser">
+                                                    <a type="button" class="btn btn-o btn-primary ButtonMoreUser pull-right" ui-sref='users'>
+                                                        <i class="ti-arrow-right"></i>
+                                                        <label class="pointerHover" translate="user_profile.SEE_MORE"></label>
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('SocialBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+</script>
