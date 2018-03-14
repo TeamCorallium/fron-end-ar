@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dirApp">
+
+<head>
+    <base href="Front-End/">
+    <title> &#60;DIRS&#62; Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/themify-icons/themify-icons.css" rel="stylesheet" media="screen">
+    <link href="bower_components/angular-notification-icons/dist/angular-notification-icons.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/angular-growl-v2/build/angular-growl.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/angular-ui-switch/angular-ui-switch.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/angular-ui-carousel/dist/ui-carousel.min.css" rel="stylesheet" media="screen">
+
+    <link href="node_modules/overlayscrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" media="screen">
+
+
+    <link href="dist/css.css" rel="stylesheet" media="screen" />
+
+    <!-- start: FAVICON -->
+    <link rel="shortcut icon" href="HTML/assets/images/favicon.ico" />
+    <!-- end: FAVICON -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113455025-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113455025-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5QS5SN5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+</head>
+<!-- end: HEAD -->
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QS5SN5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div growl></div>
+    <span us-spinner="{radius:30, width:8, length: 16}"></span>
+    <div id="app">
+        <!-- start: HEADER -->
+        <header class="small-header height-50">
+            <div class="navbar navbar-default backgroundWhite" role="navigation">
+                <!-- start: TOP NAVIGATION CONTAINER -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- start: RESPONSIVE MENU TOGGLER -->
+                        <a class="padding-top3 pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <i class="ti-align-justify"></i>
+                            <span class="sr-only" translate="index.TOGGLE"></span>
+                        </a>
+                        <!-- end: RESPONSIVE MENU TOGGLER -->
+                        <!-- start: LOGO -->
+                        <a ui-sref="home" class="navbar-brand" id="floatLogo">
+                            <img class="max-width-100" src="HTML/assets/images/logo.png">
+                        </a>
+                        <div ng-show="(userdata.connected)" class="styleNotification hidden-md hidden-lg pointerHover" ui-sref="notifications" ng-controller="TopNavBarCtrl" ng-cloak>
+                            <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationXSIcon pointerHover" ng-cloak>
+                                <i class="ti-bell fontSize20"></i>
+                            </notification-icon>
+                            <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationXSIcon pointerHover" ng-cloak>
+                                <i class="ti-bell fontSize20"></i>
+                                <label class="labelPlusXS">+</label>
+                            </notification-icon>
+                        </div>
+                        <!-- end: LOGO -->
+                    </div>
+                    <!-- start: NAVBAR -->
+                    <div class="navbar-collapse collapse margin-left-0">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle text-lowercase" ng-cloak>
+                                    <img class="width20" ng-src="HTML/assets/images/usergray.png"></img> {{userdata.username}}
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                    <li ng-show="(userdata.connected)">
+                                        <a ui-sref="profile">
+                                            <i class="ti-id-badge padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.VIEW_PROFILE"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a data-toggle="modal" data-target="#modalChangePassword">
+                                            <i class="ti-key padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.CHANGE_PASSWORD"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a data-toggle="modal" data-target="#modalAddTShirt">
+                                            <i class="ti-link padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.ADD_TSHIRT"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected)">
+                                        <a ng-show="userdata.connected" ui-sref="inbox">
+                                            <i class="ti-import padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.INBOX"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-hide="userdata.connected">
+                                        <a data-toggle="modal" data-target="#myModalLoginHome">
+                                            <i class="ti-shift-right padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_IN"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-hide="userdata.connected">
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
+                                            <i class="ti-write padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.REGISTER"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected && administrator">
+                                        <a ui-sref="admin">
+                                            <i class="ti-settings padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.MANAGE_PAGE"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected">
+                                        <a ui-sref="configurations">
+                                            <i class="ti-settings padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.CONFIGURATIONS"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected">
+                                        <a ng-click="logout()">
+                                            <i class="ti-shift-left padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_OUT"></label>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" ng-cloak>
+                                <a data-toggle="dropdown" class="dropdown-toggle text-lowercase">
+                                    <img ng-src="HTML/assets/images/language.png" class="width20">
+                                    <label translate="index.LANGUAGE"></label>
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LanguageCtrl">
+                                    <li ng-click="language.set('en', $event)">
+                                        <a translate="index.ENGLISH"></a>
+                                    </li>
+                                    <li ng-click="language.set('cn_CN', $event)">
+                                        <a translate="index.CHINESE"></a>
+                                    </li>
+                                    <li ng-click="language.set('es_ES', $event)">
+                                        <a translate="index.SPANISH"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="padding-top-10 padding-left-15 padding-right-15 margin-top3 hidden-xs hidden-sm">
+                                <h4 class="cursordefault">|</h4>
+                            </li>
+                            <li class="hidden-xs margin-top3" ng-show="userdata.connected" ng-cloak>
+                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl" ng-cloak>
+                                    <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationMDIcon pointerHover" ng-cloak>
+                                        <i class="ti-bell fontSize18"></i>
+                                    </notification-icon>
+                                    <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationMDIcon pointerHover" ng-cloak>
+                                        <i class="ti-bell fontSize18"></i>
+                                        <label class="labelPlus">+</label>
+                                    </notification-icon>
+                                </a>
+                            </li>
+                            <li class="margin-top3" ng-cloak>
+                                <a href="https://www.kickstarter.com/projects/856235450/797702255?ref=429235&token=9c07d5af">
+                                    <i class="ti-shopping-cart fontSize20"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- start: TOP BAR SOCIAL ICONS -->
+                        <div class="social-icons hidden-xs">
+                            <ul class="nav navbar-nav navbar-right padding-top-3">
+                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+                                    <a href="https://www.facebook.com/Dirstuff-technology-499063517160212/" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                    <a href="https://twitter.com/dirstuff?s=03" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Instagram" class="social-instagram tooltips">
+                                    <a href="https://www.instagram.com/dirstuff/" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+                                    <a href="https://plus.google.com/105056031020321432631/" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+                                    <a href="https://www.linkedin.com/company/dirstuffcuba/" target="_blank"></a>
+                                </li>
+                                <li class="padding-top-10 padding-left-15 padding-right-15">
+                                    <h4 class="cursordefault">|</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end: TOP BAR SOCIAL ICONS -->
+
+                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <div class="arrow-left"></div>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                    </div>
+                    <!-- end: NAVBAR -->
+                </div>
+            </div>
+        </header>
+        <div class="app-content">
+            <div ui-view></div>
+
+            <!-- start: MODAL REGISTER-->
+            <div class="modal fade login-register-form" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="RegistrationCtrl">
+                    <div class="modal-content" ng-controller="FormController">
+                        <div class="modal-header padding-0" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    <i class="ti-write"></i>
+                                    <label translate="index.REGISTER"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form">
+                                <div class="form-group">
+                                    <label for="emailHome" translate="index.EMAIL"></label>
+                                    <div class="error form-hint" id="errorEmailEmptyBox" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak translate="index.EMAIL_INVALID"></div>
+                                    <input type="$parent.email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="emailHome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" id="errorUsernameEmptyBox" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input ng-model="$parent.username" type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
+                                        ng-model="$parent.password">
+                                    <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
+                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" pw-check="password">
+                                </div>
+                                <div id="errorPasswordMatch" class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pin" translate="index.PIN"></label>
+                                    <input ng-model="$parent.pin" type="text" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-required="true">
+                                </div>
+                                <div class="msg-block" id="RegisterWrongUserPassword" hidden>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
+                                </div>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT"></a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15 text-align-center">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal()">
+                                <i class="ti-write"></i>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL REGISTER-->
+
+            <!-- start: MODAL REGISTER HOME-->
+            <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="RegistrationCtrl">
+                    <div class="modal-content" ng-controller="FormController">
+                        <div class="modal-header padding-0" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    <i class="ti-write"></i>
+                                    <label translate="index.REGISTER"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form">
+                                <div class="form-group">
+                                    <label for="email" translate="index.EMAIL"></label>
+                                    <div class="error form-hint" id="errorEmailResgisterEmpty" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak ng-cloak translate="index.EMAIL_INVALID"></div>
+                                    <input ng-model="$parent.email" type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" id="errorUsernameResgisterEmpty" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input ng-model="$parent.username" type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
+                                    <input ng-model="$parent.password" type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true">
+                                    <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
+                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" pw-check="pass">
+                                </div>
+                                <div id="errorPasswordRegisterMatch" class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
+                                </div>
+                                <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
+                                </div>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT">Do you have an account?</a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15 text-align-center">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome()">
+                                <i class="ti-write"></i>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL REGISTER HOME-->
+
+            <!-- start: MODAL LOGIN HOME-->
+            <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="LoginCtrl">
+                    <div class="modal-content" ng-controller="FormController">
+                        <div class="modal-header padding-0" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    <i class="ti-shift-right"></i>
+                                    <label translate="index.LOG_IN"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="LogingForm" role="form">
+                                <div class="form-group">
+                                    <label for="usernameHome" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" id="usernameLogin" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input ng-model="$parent.usernameHome" type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''" id="usernameHome" name="usernameHome" placeholder="{{ 'index.ENTER_USERNAME' | translate }}"
+                                        ng-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwdHome" translate="index.PASSWORD"></label>
+                                    <input ng-model="$parent.pwdHome" type="password" class="form-control" id="pwdHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pwdHome">
+                                </div>
+                                <div class="msg-block" id="errorBoxHome" hidden>
+                                    <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
+                                </div>
+                                <a ng-click="raiseModalRegister()" translate="index.NO_ACCOUNT"></a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15 text-align-center">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="LogingForm.$invalid" ng-click="loginModal()">
+                                <i class="ti-shift-right"></i>
+                                <label translate="index.LOG_IN" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL LOGIN HOME-->
+
+            <a id="scroll-top" href="#">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!-- start: FOOTER -->
+            <section class="container-fluid container-fullw bg-white padding-top-0 padding-left-0 padding-right-0 paddingBottom0XS borderNoneXS">
+                <div class="Separator"></div>
+            </section>
+            <footer id="footer" class="borderNoneXS">
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <i class="fa fa-copyright"></i>
+                                <label translate="index.COPYRIGHT"></label>
+                                <span class="current-year"></span>
+                                <label translate="index.RESERVED_RIGHT"></label>
+                            </div>
+                            <div class="col-md-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li>
+                                            <a ui-sref='terms' translate="index.TERMS"></a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref='privacy' translate="index.PRIVACY"></a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref='faq' translate="index.FAQ"></a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref='contact' translate="index.CONTACT_US"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end: APP CONTENT -->
+    </div>
+
+    <script type="text/javascript" src="dist/app.js"></script>
+    <script src="bower_components/angular-img-cropper/dist/angular-img-cropper.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
+
+    <script src="bower_components/angular-spinner/angular-spinner.min.js"></script>
+    <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            Main.init();
+            Index.init();
+        });
+    </script>
+
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
+</body>
+
+</html>
