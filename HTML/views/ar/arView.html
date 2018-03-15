@@ -1,3 +1,55 @@
+<script>
+    var type = '';
+
+    function getOrientation() {
+        type = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+    };
+    getOrientation();
+
+    function leftKeepFunction() {
+        if (type == 'Portrait') {
+            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+            document.querySelector('#object3dLandscape').style.visibility = "none";
+        } else {
+            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+            document.querySelector('#object3dPortrait').style.visibility = "none";
+        }
+        obj3D.set(obj3D.x - 0.05, obj3D.y, obj3D.z);
+    };
+
+    function topKeepFunction() {
+        if (type == 'Portrait') {
+            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+            document.querySelector('#object3dLandscape').style.visibility = "none";
+        } else {
+            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+            document.querySelector('#object3dPortrait').style.visibility = "none";
+        }
+        obj3D.set(obj3D.x, obj3D.y, obj3D.z - 0.05);
+    };
+
+    function rightKeepFunction() {
+        if (type == 'Portrait') {
+            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+            document.querySelector('#object3dLandscape').style.visibility = "none";
+        } else {
+            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+            document.querySelector('#object3dPortrait').style.visibility = "none";
+        }
+        obj3D.set(obj3D.x + 0.05, obj3D.y, obj3D.z);
+    };
+
+    function downKeepFunction() {
+        if (type == 'Portrait') {
+            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+            document.querySelector('#object3dLandscape').style.visibility = "none";
+        } else {
+            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+            document.querySelector('#object3dPortrait').style.visibility = "none";
+        }
+        obj3D.set(obj3D.x, obj3D.y, obj3D.z + 0.05);
+    };
+</script>
 <div class="profile-padding background-light" ng-controller="ArCtrl">
     <div class="row">
 

@@ -83,11 +83,15 @@ module.exports = function(grunt) {
                     'bower_components/angular-ui-carousel/dist/ui-carousel.js',
                     'bower_components/slick-carousel/slick/slick.js',
                     'bower_components/angular-slick-carousel/dist/angular-slick.min.js',
+                    'node_modules/aframe-always-fullscreen-component/dist/aframe-always-fullscreen-component.min.js',
+                    'node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.min.js',
+                    'node_modules/canvas-to-image/js/canvas-to-image.js',
                     'HTML/assets/*.js',
                     'HTML/assets/js/*.js',
                     'HTML/assets/js/services/*.js',
                     'HTML/assets/js/controllers/*.js',
                     'HTML/assets/js/filters/*.js',
+                    'HTML/assets/js/aframe/*.js',
                     'node_modules/ng-file-upload/dist/ng-file-upload.js'
                 ],
                 dest: 'dist/app.js'
