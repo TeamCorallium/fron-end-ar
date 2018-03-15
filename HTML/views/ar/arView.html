@@ -52,6 +52,23 @@
 </script>
 <div class="profile-padding background-light" ng-controller="ArCtrl">
     <div class="row">
+        <a-scene screenshot=" width: {{widthScreen}}; height: {{heightScreen}}" embeded id="sceneAR" always-fullscreen="platform:all; debug:false" arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono_matrix; maxDetectionRate: 30;'>
+            <a-marker-camera mouse-cursor preset='custom' type='pattern' url='{{patterDir}}'>
+                <a-entity visible="{{portrait}}" rotation="330 0 0" id="object3dPortrait" scale="0.8 0.4 0.6" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
+                    <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+                </a-entity>
+                <a-entity visible="{{landscape}}" rotation="330 0 0" id="object3dLandscape" scale="0.8 0.8 0.8" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
+                    <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+                </a-entity>
+                <a-cursor visible="false"></a-cursor>
+            </a-marker-camera>
+        </a-scene>
 
+        <button ng-click="screenshotFunction()" id="screenshotAR" class="buttonScreenshot"></button>
+
+        <input onmousedown="tempo = setInterval('leftKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="leftFunction()" id="left" type="button" class="btn buttonLeft"></input>
+        <input onmousedown="tempo = setInterval('topKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="topFunction()" id="top" type="button" class="btn buttonTop"></input>
+        <input onmousedown="tempo = setInterval('rightKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="rightFunction()" id="right" type="button" class="btn buttonRight"></input>
+        <input onmousedown="tempo = setInterval('downKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="downFunction()" id="down" type="button" class="btn buttonDown"></input>
     </div>
 </div>
