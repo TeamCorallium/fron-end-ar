@@ -21,6 +21,7 @@ app.constant('JS_REQUIRED', {
         'socialNetworksCtrl': 'HTML/assets/js/controllers/socialNetworksCtrl.js',
         'userPrivateCtrl': 'HTML/assets/js/controllers/userPrivateCtrl.js',
         'termsCtrl': 'HTML/assets/js/controllers/termsCtrl.js',
-        'privacyCtrl': 'HTML/assets/js/controllers/privacyCtrl.js'
+        'privacyCtrl': 'HTML/assets/js/controllers/privacyCtrl.js',
+        'arCtrl': 'HTML/assets/js/controllers/arCtrl.js'
     }
 });
