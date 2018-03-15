@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!-- Template Name: Clip-Two - Frontend | Build with Twitter Bootstrap 3.x | Author: ClipTheme -->
 <!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
@@ -532,4 +533,540 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<!-- Template Name: Clip-Two - Frontend | Build with Twitter Bootstrap 3.x | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<html lang="en" ng-app="dirApp">
+<!-- start: HEAD -->
+
+<head>
+    <base href="/Front-End/HTML/">
+    <title> T-shirt &#60;DIR&#62;</title>
+    <!-- start: META -->
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <link href="../bower_components/ng-emoticons/src/ng-emoticons.min.css" rel="stylessheet" media="screen">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/themify-icons/themify-icons.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/slick.js/slick/slick.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/slick.js/slick/slick-theme.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/magnific-popup/dist/magnific-popup.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/angular-growl-v2/build/angular-growl.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/sweetalert/lib/sweet-alert.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/angular-notification-icons/dist/angular-notification-icons.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/angular-ui-switch/angular-ui-switch.min.css" rel="stylesheet" media="screen">
+
+    <!-- css: ANGULAR NngImgCrop-->
+    <link href="../bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet" media="screen" />
+
+    <link href="assets/css/styles.css" rel="stylesheet" media="screen">
+    <link href="assets/css/plugins.css" rel="stylesheet" media="screen">
+    <link href="assets/css/css.css" rel="stylesheet" media="screen">
+    <!-- end: MAIN CSS -->
+
+    <!-- start: FAVICON -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <!-- end: FAVICON -->
+</head>
+<!-- end: HEAD -->
+
+<body>
+    <div growl></div>
+    <span us-spinner="{radius:30, width:8, length: 16}"></span>
+    <div id="app">
+        <!-- start: HEADER -->
+        <header class="small-header height-50">
+            <div class="navbar navbar-default" role="navigation">
+                <!-- start: TOP NAVIGATION CONTAINER -->
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- start: RESPONSIVE MENU TOGGLER -->
+                        <a class="padding-top3 pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <i class="ti-align-justify"></i>
+                            <span class="sr-only" translate="index.TOGGLE"></span>
+                        </a>
+                        <!-- end: RESPONSIVE MENU TOGGLER -->
+                        <!-- start: LOGO -->
+                        <a ui-sref="home" class="navbar-brand" id="floatLogo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <div ng-show="(userdata.connected)" class="styleNotification hidden-md hidden-lg pointerHover" ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                            <notification-icon count='notificationCount' class="notificationXSIcon pointerHover">
+                                <i class="ti-bell fontSize20"></i>
+                            </notification-icon>
+                        </div>
+                        <!-- end: LOGO -->
+                    </div>
+                    <!-- start: NAVBAR -->
+                    <div class="navbar-collapse collapse margin-left-0">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                <a data-toggle="dropdown" class="dropdown-toggle text-lowercase" ng-cloak>
+                                    <i class="ti-user"></i> {{userdata.username}}
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                    <li ng-show="(userdata.connected)">
+                                        <a ui-sref="profile">
+                                            <i class="ti-id-badge padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.VIEW_PROFILE"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a data-toggle="modal" data-target="#modalChangePassword">
+                                            <i class="ti-key padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.CHANGE_PASSWORD"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a data-toggle="modal" data-target="#modalAddTShirt">
+                                            <i class="ti-link padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.ADD_TSHIRT"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected)">
+                                        <a ng-show="userdata.connected" ui-sref="inbox">
+                                            <i class="ti-import padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.INBOX"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-hide="userdata.connected">
+                                        <a data-toggle="modal" data-target="#myModalLoginHome">
+                                            <i class="ti-shift-right padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_IN"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-hide="userdata.connected">
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
+                                            <i class="ti-write padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.REGISTER"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected && administrator">
+                                        <a ui-sref="admin">
+                                            <i class="ti-settings padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.MANAGE_PAGE"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected">
+                                        <a ui-sref="configurations">
+                                            <i class="ti-settings padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.CONFIGURATIONS"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="userdata.connected">
+                                        <a ng-click="logout()">
+                                            <i class="ti-shift-left padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_OUT"></label>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" ng-cloak>
+                                <a data-toggle="dropdown" class="dropdown-toggle text-lowercase">
+                                    <i class="ti-world"></i>
+                                    <label translate="index.LANGUAGE"></label>
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LanguageCtrl">
+                                    <li ng-click="language.set('en', $event)">
+                                        <a translate="index.ENGLISH"></a>
+                                    </li>
+                                    <li ng-click="language.set('cn_CN', $event)">
+                                        <a translate="index.CHINESE"></a>
+                                    </li>
+                                    <li ng-click="language.set('es_ES', $event)">
+                                        <a translate="index.SPANISH"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="padding-top-10 padding-left-15 padding-right-15 margin-top3 hidden-xs hidden-sm">
+                                <h4 class="cursordefault">|</h4>
+                            </li>
+                            <li class="hidden-xs margin-top3" ng-show="userdata.connected" ng-cloak>
+                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                                    <notification-icon count='notificationCount' class="notificationMDIcon pointerHover">
+                                        <i class="ti-bell fontSize18"></i>
+                                    </notification-icon>
+                                </a>
+                            </li>
+                            <li class="margin-top3" ng-cloak>
+                                <a>
+                                    <i class="ti-shopping-cart fontSize20"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- start: TOP BAR SOCIAL ICONS -->
+                        <div class="social-icons hidden-xs">
+                            <ul class="nav navbar-nav navbar-right padding-top-3">
+                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                    <a href="http://www.twitter.com" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
+                                    <a href="http://dribbble.com" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+                                    <a href="http://facebook.com" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+                                    <a href="http://google.com" target="_blank"></a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+                                    <a href="http://linkedin.com" target="_blank"></a>
+                                </li>
+                                <li class="padding-top-10 padding-left-15 padding-right-15">
+                                    <h4 class="cursordefault">|</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end: TOP BAR SOCIAL ICONS -->
+
+                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <div class="arrow-left"></div>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                    </div>
+                    <!-- end: NAVBAR -->
+                </div>
+                <!-- end: TOP NAVIGATION CONTAINER -->
+                <!-- <div id="overlay-search">
+                    <form method="get" action="search.html">
+                        <input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
+                    </form>
+                    <a class="pull-right margin-right-20 close-search mobile-button" data-toggle-target="body" data-toggle-class="search-open">
+                        <i class="ti-close"></i>
+                    </a>
+                </div> -->
+            </div>
+        </header>
+        <div class="app-content">
+            <div ui-view></div>
+
+            <!-- start: MODAL REGISTER-->
+            <div class="modal fade login-register-form" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="FormController">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-write"></i>
+                                    <label translate="index.REGISTER"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form">
+                                <div class="form-group">
+                                    <label for="emailHome" translate="index.EMAIL"></label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak translate="index.EMAIL_INVALID"></div>
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="emailHome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
+                                        ng-model="password">
+                                    <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                    <div class="strength-meter">
+                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
+                                    <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="againPassHome" pw-check="password">
+                                </div>
+                                <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pin" translate="index.PIN"></label>
+                                    <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
+                                        required>
+                                </div>
+                                <div class="msg-block" id="RegisterWrongUserPassword" hidden>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
+                                </div>
+                                <a ng-controller="RegistrationCtrl" ng-click="raiseModalLogin()" translate="index.ACCOUNT"></a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                                <i class="ti-write"></i>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL REGISTER-->
+
+            <!-- start: MODAL REGISTER HOME-->
+            <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="FormController">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-write"></i>
+                                    <label translate="index.REGISTER"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form">
+                                <div class="form-group">
+                                    <label for="email" translate="index.EMAIL"></label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak ng-cloak translate="index.EMAIL_INVALID"></div>
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="user">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="pass">
+                                    <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                    <div class="strength-meter">
+                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
+                                    <input type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" ng-model="pass_verify" pw-check="pass">
+                                </div>
+                                <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
+                                </div>
+                                <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
+                                </div>
+                                <a ng-controller="RegistrationCtrl" ng-click="raiseModalLogin()" translate="index.ACCOUNT">Do you have an account?</a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
+                                <i class="ti-write"></i>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL REGISTER HOME-->
+
+            <!-- start: MODAL LOGIN HOME-->
+            <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="FormController">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-shift-right"></i>
+                                    <label translate="index.LOG_IN"></label>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="LogingForm" role="form">
+                                <div class="form-group">
+                                    <label for="usernameHome" translate="index.USERNAME"></label>
+                                    <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''" id="usernameHome" name="usernameHome" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="usernameHome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwdHome" translate="index.PASSWORD"></label>
+                                    <input ng-model="pwdHome" type="password" class="form-control" id="pwdHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pwdHome">
+                                </div>
+                                <div class="msg-block" id="errorBoxHome" hidden>
+                                    <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
+                                </div>
+                                <a ng-controller="LoginCtrl" ng-click="raiseModalRegister()" translate="index.NO_ACCOUNT"></a>
+                            </form>
+                        </div>
+                        <div class="modal-footer padding-15" ng-controller="LoginCtrl">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal($parent.usernameHome, $parent.pwdHome)">
+                                <i class="ti-shift-right"></i>
+                                <label translate="index.LOG_IN" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL LOGIN HOME-->
+
+            <a id="scroll-top" href="#">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!-- start: FOOTER -->
+            <footer id="footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <i class="fa fa-copyright"></i>
+                                <label translate="index.COPYRIGHT"></label>
+                                <span class="current-year"></span>
+                                <label translate="index.RESERVED_RIGHT"></label>
+                            </div>
+                            <div class="col-md-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li>
+                                            <a translate="index.ABOUT_US"></a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref='faq' translate="index.FAQ"></a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref='contact' translate="index.CONTACT_US"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end: APP CONTENT -->
+    </div>
+    <!-- start: MAIN JAVASCRIPTS -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
+    <script src="../bower_components/jquery.appear.js/jquery.appear.min.js"></script>
+    <script src="../bower_components/slick.js/slick/slick.min.js"></script>
+    <script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+    <script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+    <!-- <script src="../bower_components/countto/jquery.countTo.js"></script> -->
+    <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/index.min.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+
+    <!-- start: ANGULAR SCRIPTS-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="../bower_components/ng-timeago/ngtimeago.min.js"></script>
+    <script src="../bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+    <script src="../bower_components/sweetalert/lib/sweet-alert.min.js"></script>
+    <script src="../bower_components/angular-notification-icons/dist/angular-notification-icons.min.js"></script>
+    <script src="assets/js/SweetAlertAux.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/main.js"></script>
+    <script src="assets/config.constant.js"></script>
+    <script src="assets/config.router.min.js"></script>
+    <!-- end: ANGULAR SCRIPTS-->
+
+    <!-- start: CROPPER CONTROLLERS-->
+    <!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
+    <!-- start: CROPPER CONTROLLERS-->
+
+    <!-- oclazyload -->
+    <script src="../bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+    <!-- start: SERVICES-->
+    <script src="assets/js/services/restService.js"></script>
+    <!-- end: SERVICES-->
+
+    <!-- start: SPINNER CONTROLLERS-->
+    <script src="../bower_components/spin.js/spin.min.js"></script>
+    <script src="../bower_components/angular-spinner/angular-spinner.min.js"></script>
+    <script src="../bower_components/angular-loading-spinner/angular-loading-spinner.min.js"></script>
+    <!-- end: SPINNER CONTROLLERS-->
+
+    <!-- start: TOASTER CONTROLLERS -->
+    <script src="../bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+    <!-- end: TOASTER CONTROLLERS -->
+
+    <!-- start: CONTROLLERS-->
+    <script src="assets/js/controllers/loginCtrl.js"></script>
+    <script src="assets/js/controllers/closeCtrl.js"></script>
+    <script src="assets/js/controllers/registrationCtrl.js"></script>
+    <script src="assets/js/controllers/topNavBarCtrl.js"></script>
+    <script src="assets/js/controllers/languageCtrl.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src="assets/js/filters/htmlToPlaintext.js"></script>
+    <!-- end: CONTROLLERS-->
+
+    <!-- start: ANGULAR NngImgCrop-->
+    <script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <!-- end: ANGULAR NngImgCrop-->
+
+    <!-- start: CONTROLLERS ANIMATIONS-->
+    <script src="assets/js/animations.min.js"></script>
+    <!-- end: CONTROLLERS ANIMATIONS-->
+
+    <!-- start: ANGULAR TRANSLATE -->
+    <script src="../bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="../bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js"></script>
+    <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+    <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+    <!-- end: ANGULAR TRANSLATE -->
+
+    <!-- start: ANGULAR EMOTICONS -->
+    <script src="../bower_components/ng-emoticons/src/ng-emoticons.min.js"></script>
+    <!-- end: ANGULAR EMOTICONS -->
+
+    <!-- start: ANGULAR SWITCH -->
+    <script src="../bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+    <!-- end: ANGULAR SWITCH -->
+    <script>
+        jQuery(document).ready(function() {
+            Main.init();
+            Index.init();
+        });
+    </script>
+
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
+</body>
+
+>>>>>>> dev
 </html>

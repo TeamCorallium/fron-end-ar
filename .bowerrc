@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 {
   "directory": "bower_components",  
   "registry": "http://bower.herokuapp.com",
   "strict-ssl": false
+=======
+{
+  "directory": "bower_components",  
+  "registry": "http://bower.herokuapp.com",
+  "strict-ssl": false
+>>>>>>> dev
 }

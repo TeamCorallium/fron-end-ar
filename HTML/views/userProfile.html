@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="profile-padding-view" ng-controller="UserProfileCtrl">
     <div id="HintSocialNetwork">
         <p class="SocialHoverText">{{SocialActive}}</p>
@@ -733,4 +734,741 @@
             }
         });
     });
+=======
+<div class="profile-padding-view" ng-controller="UserProfileCtrl">
+    <div id="HintSocialNetwork">
+        <p class="SocialHoverText">{{SocialActive}}</p>
+    </div>
+    <div class="BoxXsWidth">
+        <img class="pictureExploreUser" ng-src="{{user.cover}}" />
+        <a ng-show="EditInfoFlag" data-toggle="modal" data-target="#ModalImageCoverCropper" class="btn btn-o buttonChangeCover">
+            <img ng-src="HTML/assets/images/coverWhite.png" class="iconCover">
+            <label class="textColorWhite" translate="user_profile.CHANGE_COVER"></label>
+        </a>
+    </div>
+    <div class="row backgroundWhite">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+            <div class="col-xs-12">
+                <div class="AvatarXSBox">
+                    <img ng-show="!EditInfoFlag" ng-src="{{user.avatar}}" class="img-circle avatarXS" />
+                    <input ng-show="EditInfoFlag" type="image" ng-src="{{user.avatar}}" class="img-circle avatarXS" data-toggle="modal" data-target="#ModalImageCropper">
+                </div>
+                <div class="UserInfoBox">
+                    <h4 ng-show="!EditInfoFlag" class="padding-0 margin-top-10">
+                        <strong>{{showName}}</strong>
+                    </h4>
+                    <input class="col-xs-12 padding-0 margin-top-10 margin-bottom-5" ng-show="EditInfoFlag" type="text" placeholder="{{ 'user_profile.ENTER_FULL_NAME' | translate }}" ng-model="user.fullname">
+                    <h5 class="padding-0">@{{user.showUsername}}</h5>
+                </div>
+                <div class="col-xs-12">
+                    <h5 ng-show="!EditInfoFlag" class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
+                    <textarea ng-show="EditInfoFlag" placeholder="{{ 'user_profile.ENTER_INFO' | translate }}" class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp" ng-model="user.info"></textarea>
+                    <a ng-show="!EditInfoFlag && user.email != ''" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                        <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
+                    </a>
+                    <a ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                        <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
+                    </a>
+                    <div class="form-group" ng-show="EditInfoFlag">
+                        <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                        <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                        <input type="email" class="col-xs-12 form-control margin-top-10" ng-class="(editUserXS.emailHome.$dirty && editUserXS.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'user_profile.ENTER_EMAIL' | translate }}" ng-required="true"
+                            ng-model="user.email">
+                    </div>
+                    <div class="form-group" ng-show="EditInfoFlag">
+                        <input type="text" class="col-xs-12 form-control margin-top-10" id="phone" name="phone" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}" ng-required="true" ng-model="user.phone">
+                    </div>
+                </div>
+                <div class="col-xs-11 marginLeft5 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
+                    <span class="col-xs-6 padding-left-0" ng-cloak>
+                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                    </span>
+                    <div class="col-xs-6 padding-left-0 padding-right-0">
+                        <span class="stars">
+                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <nav class="nav navbar-default ColorNavBar">
+                <ul class="list-inline SocialIcon list-unstyled">
+                    <li id="SocialBox">
+                        <ul class="list-inline SocialIcon list-unstyled margin-left-0 displayInlineFlex" ng-class="{HiddenIfXS: user.socialnetworks.length <= 0}">
+                            <li ng-repeat="sn in user.socialnetworks" class="padding-5">
+                                <a ng-show="!EditInfoFlag" ng-mouseover="mouseOverSocial(sn.name, $event)" ng-mouseleave="mouseLeaveSocial()" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                                    <i class="{{sn.type}}"></i>
+                                </a>
+                                <a ng-show="EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
+                                    <i class="{{sn.type}}"></i>
+                                    <notification-icon class="positionInheritIcon" hide-count="true" count='1'></notification-icon>
+                                    <i class="ti-close iconClose"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline list-unstyled margin-left-0 displayInlineFlex margin-top--15XS" ng-show="user.socialnetworks.length == 0">
+                            <li class="padding-5">
+                                <a type="button" class="SocialList HoverWhite padding-top-2 styleButtonSocialEmpty" data-toggle="modal" data-target="#modalSocialNetwork">
+
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="padding-top-5 padding-right-0 padding-left-0 pull-right marginButtonEdit marginTop10XS marginLeft20XS col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-md-5 col-sm-5 col-xs-4 margin-left-13XS" data-toggle="modal" data-target="#modalSocialNetwork">
+                            <i class="ti-plus"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD_SOCIAL"></label>
+                        </a>
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="EditProfile()" ng-show="!EditInfoFlag">
+                            <i class="ti-pencil-alt"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.EDIT_PROFILE"></label>
+                        </a>
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="saveProfile()" ng-show="EditInfoFlag">
+                            <i class="ti-save"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.SAVE_PROFILE"></label>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="container-fluid container-fullw bg-white padding-top-10 paddingBottom60 backgroundGray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="testimonial-container col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10 padding-left-0 padding-right-0">
+                            <div ng-show="!EditInfoFlag" class="image_middle backgroundWhite border-radius50">
+                                <img ng-src="{{user.avatar}}" class="img-circle hidden-xs imgProfile" />
+                            </div>
+                            <form ng-show="EditInfoFlag" class="form" name="form" hidden-xs>
+                                <div class="image_middle backgroundWhite border-radius50">
+                                    <img ngf-thumbnail="user.avatar" class="img-circle imgProfile col-xs-12 hidden-xs padding-0" />
+                                </div>
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs">
+                                    <span data-toggle="modal" data-target="#ModalImageCropper" class="btn btn-success fileinput-button button-image-left
+                                          col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+                                        <i class="ti-pencil-alt"></i>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="UserInfoBox hidden-xs">
+                                <h4 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10" ng-show="user.fullname != ''">
+                                    <strong>{{showName}}</strong>
+                                </h4>
+                                <h4 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.showUsername}}</h4>
+                                <h5 ng-show="!EditInfoFlag" class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
+                                </h5>
+                                <a ng-show="!EditInfoFlag && user.email != '' && showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail">
+                                    <p class="margin-bottom-0 col-sm-11 col-md-11 col-lg-11 padding-left-10 pull-right">{{showEmail}}
+                                        <span class="showTextHover">{{user.email}}</span>
+                                    </p>
+                                </a>
+                                <a ng-show="!EditInfoFlag && user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
+                                </a>
+                                <a ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                                    <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
+                                </a>
+                                <div ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
+                                    <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
+                                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                                    </span>
+                                    <div class="col-md-7 padding-left-0 padding-right-0">
+                                        <span class="stars">
+                                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <form ng-show="EditInfoFlag" name="editUserMD" role="form" ng-controller="FormController">
+                                    <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10">@{{user.showUsername}}</h4>
+                                    <input type="text" placeholder="{{ 'user_profile.ENTER_FULL_NAME' | translate }}" class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">
+                                    <textarea class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp" ng-model="user.info" placeholder="{{ 'user_profile.ENTER_INFO' | translate }}"></textarea>
+                                    <div class="form-group">
+                                        <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                                        <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.email" ng-cloak translate="user_profile.EMAIL_INVALID"></div>
+                                        <input type="email" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 form-control margin-top-10" ng-class="(editUserMD.emailMD.$dirty && editUserMD.emailMD.$invalid) ? 'error' : ''" id="emailMD" name="emailMD" placeholder="{{ 'user_profile.ENTER_EMAIL' | translate }}"
+                                            ng-required="true" ng-model="user.email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 form-control margin-top-10" id="phoneMD" name="phoneMD" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}" ng-required="true" ng-model="user.phone">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
+                                        <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
+                                            <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                                            <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                            <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                                        </span>
+                                        <div class="col-md-7 padding-left-0 padding-right-0">
+                                            <span class="stars">
+                                                <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="padding-right-15 paddingLeft15XS">
+                                <a type="button" ng-click="makeQRCode()" ng-show="user.qrcode == ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-settings ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span translate="user_profile.GENERATE_QR"></span>
+                                </a>
+                            </div>
+                            <div class="padding-right-15 paddingLeft15XS">
+                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="borderQR padding-15 col-xs-12" />
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12 padding-0 margin-top-10" ng-show="user.qrcode != ''">
+                                    <a type="button" ng-click="makeQRCode()" class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <i class="ti-reload"></i>
+                                    </a>
+                                    <a type="button" href="{{user.qrcode}}" download class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right">
+                                        <i class="ti-save"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS">
+                                <ul class="nav nav-tabs nav-justified">
+                                    <li class="active">
+                                        <a ng-click="changeMiddle(0)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/snippets.png"></img>
+                                            <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
+                                        </a>
+                                        <a ng-click="changeMiddle(3)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/networks.png">
+                                            <label class="pointerHover" translate="user_profile.SOCIAL"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 3"></div>
+                                        </a>
+                                        <a ng-click="changeMiddle(1)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/followers.png">
+                                            <label class="pointerHover" translate="user_profile.FOLLOWERS"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 1"></div>
+                                        </a>
+                                        <a ng-click="changeMiddle(2)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/following.png">
+                                            <label class="pointerHover" translate="user_profile.FOLLOWING"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 2"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="indexShowMiddle == 0">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS backgroundWhite">
+                                    <textarea ng-model="pSnippet" placeholder="{{ 'user_profile.ENTER_SNIPPET' | translate }}" class="borderTextAreaSnipets SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-15 borderTextAreaSnipets"></textarea>
+                                    <div class="SnippetFooter col-xs-12 col-sm-12 col-md-12 col-lg-12 backgroundWhite">
+                                        <a class="btn btn-primary pull-right" ng-click="publishSnippets()">
+                                            <img class="IconPublish pointerHover" ng-src="HTML/assets/images/publish.png"></img>
+                                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.PUBLISH"></label>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 padding-0 marginSnippetXS">
+                                    <ul class="ltwt">
+                                        <li ng-repeat="snippet in user.snippets">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
+                                                    <div class="IconSnippetBox">
+                                                        <img class="IconSnippet" ng-src="HTML/assets/images/snippet.png"></img>
+                                                    </div>
+                                                    <div class="TitleSnippetBox">
+                                                        <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                            <i class="fa fa-fw fa-clock-o"></i>
+                                                            {{snippet.created | timeago}}
+                                                        </span>
+                                                        <div class="btn-group pull-right DropdownMarginSnippets" uib-dropdown>
+                                                            <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
+                                                                <span class="fa fa-ellipsis-h"></span>
+                                                            </button>
+                                                            <ul class="ListEdit dropdown-menu" role="menu">
+                                                                <li>
+                                                                    <a ng-click="changeFlatEdit()" ng-show="!EditSnippetFlag">
+                                                                        <i class="ti-pencil-alt"></i>
+                                                                        <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a ng-click="saveSnippetEdit(snippet.url, snippet.body)" ng-show="EditSnippetFlag">
+                                                                        <i class="ti-save"></i>
+                                                                        <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a ng-click="deleteSnippet(snippet.url)">
+                                                                        <i class="ti-trash"></i>
+                                                                        <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30 padding-right-0 lineHeight20" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSnippetFlag"></h5>
+                                                <textarea ng-model="snippet.body" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30" ng-show="EditSnippetFlag"></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-hide="user.snippets.length <= 5 && currentPage == 1">
+                                    <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
+                                        <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
+                                            <a ng-click="previous()" class="ng-binding border-radius6" translate="user_profile.PREVIOUS"></a>
+                                        </li>
+                                        <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
+                                            <a ng-click="next()" class="ng-binding border-radius6" translate="user_profile.NEXT"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="indexShowMiddle == 1">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
+                                    <ul class="post-list">
+                                        <li class="borderBottomNone" ng-repeat="follower in followers">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="post-image marginPictureFollowerFollowingXS">
+                                                    <div class="img-thumbnail">
+                                                        <a ng-click="goToProfile(follower.username)">
+                                                            <img ng-src="{{getAvatar(follower.avatar)}}" class="img-responsive">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="post-info col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-right-0">
+                                                    <a class="nameFollowerFollowing" ng-show="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.username}}</a>
+                                                    <a class="nameFollowerFollowing" ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
+                                                    <h5 class="borderFollowerFollowing">{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
+                                                        <a ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 HiddenXSif">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
+                                                            <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
+                                                        </a>
+                                                        <a ng-click="clipMessage(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/message.png"></img>
+                                                            <label class="pointerHover" translate="user_profile.LEAVE_MESSAGE"></label>
+                                                        </a>
+                                                        <a ng-click="follow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="!follower.currentFollowed">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/follow.png">
+                                                            <label class="pointerHover" translate="user_profile.FOLLOW"></label>
+                                                        </a>
+                                                        <a ng-click="unfollow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="follower.currentFollowed">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/unfollow.png">
+                                                            <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="indexShowMiddle == 2">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
+                                    <ul class="post-list">
+                                        <li class="borderBottomNone" ng-repeat="followTo in following">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="post-image marginPictureFollowerFollowingXS">
+                                                    <div class="img-thumbnail">
+                                                        <a ng-click="goToProfile(followTo.profileUserName)">
+                                                            <img ng-src="{{getAvatar(followTo.profileAvatar)}}" class="img-responsive">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="post-info col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-right-0">
+                                                    <a class="nameFollowerFollowing" ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
+                                                    <a class="nameFollowerFollowing" ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
+                                                    <h5 class="borderFollowerFollowing">{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
+                                                        <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 HiddenXSif">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
+                                                            <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
+                                                        </a>
+                                                        <a ng-click="clipMessage(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/message.png"></img>
+                                                            <label class="pointerHover" translate="user_profile.LEAVE_MESSAGE"></label>
+                                                        </a>
+                                                        <a ng-click="followFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="!followTo.stateFollow">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/follow.png">
+                                                            <label class="pointerHover" translate="user_profile.FOLLOW"></label>
+                                                        </a>
+                                                        <a ng-click="unfollowFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="followTo.stateFollow">
+                                                            <img class="IconSnippet" ng-src="HTML/assets/images/unfollow.png">
+                                                            <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="indexShowMiddle == 3">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
+                                    <ul class="post-list">
+                                        <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="btn-group pull-right DropdownMargin" uib-dropdown>
+                                                    <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
+                                                        <span class="fa fa-ellipsis-h"></span>
+                                                    </button>
+                                                    <ul class="ListEdit dropdown-menu" role="menu">
+                                                        <li class="styleLiSocial" ng-show="!EditSocialFlag">
+                                                            <a ng-click="changeFlagSocialEdit()">
+                                                                <i class="ti-pencil-alt"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                            </a>
+                                                        </li>
+                                                        <li class="styleLiSocial" ng-show="EditSocialFlag">
+                                                            <a ng-click="saveSocialEdit(sn.url, sn.name, sn.type, sn.id)">
+                                                                <i class="ti-save"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
+                                                            </a>
+                                                        </li>
+                                                        <li class="styleLiSocial">
+                                                            <a ng-click="deleteSocialNetwork(sn.id)">
+                                                                <i class="ti-trash"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <a class="text-dark font-size-18" ng-click="goToLink(sn.url)">
+                                                    <i class="{{sn.type}} margin-right-8"></i> {{sn.name}}
+                                                </a>
+                                                <h5 class="margin-top-10" ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                <textarea ng-model="sn.url" class="margin-top-10 height30 col-xs-10 col-sm-10 col-md-10 col-lg-10 resize-none" ng-show="EditSocialFlag"></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS hidden-xs">
+                    <div class="paddingViewProfile">
+                        <aside class="sidebar">
+                            <div class="tabbable">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs nav-justified">
+                                        <li class="active">
+                                            <a data-toggle="tab">
+                                                <img class="IconPopular" ng-src="HTML/assets/images/popular.png"></img>
+                                                <label translate="user_profile.POPULAR_USER"></label>
+                                            </a>
+                                            <hr class="tall margin-0">
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active padding-bottom-0" id="popularUsers">
+                                            <ul class="post-list">
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
+                                                    <div class="post-image">
+                                                        <div class="img-thumbnail">
+                                                            <a ng-disabled="!popularUser.confVisible" ng-click="goToProfile(popularUser.owner)">
+                                                                <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-info">
+                                                        <a class="MessageUnread fontSize13" ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a class="MessageUnread fontSize13" ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <h5 class="lineHeight20">{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    </div>
+                                                </li>
+                                                <!-- <li class="ListMoreUser center">
+                                                    <a type="button" class="btn btn-primary" ui-sref='users'>
+                                                        <i class="ti-arrow-right"></i>
+                                                        <label class="pointerHover textColorWhite margin-bottom-0" translate="user_profile.SEE_MORE"></label>
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start: MODAL SOCIAL NETWORK-->
+    <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="FormController">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header padding-15">
+                    <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        <i class="ti-plus"></i>
+                        <label translate="user_profile.ADD_SOCIAL"></label>
+                    </h4>
+                </div>
+                <div class="modal-body padding-15">
+                    <form name="AddSocialNetworks" role="form">
+                        <div class="form-group">
+                            <label for="socialnetwork" translate="user_profile.SOCIAL_NETWORK"></label>
+                            <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''" ng-model="$parent.socialnetwork" id="socialnetwork" name="socialnetwork"
+                                ng-required="true">
+                                <option value="0" ng-selected="$parent.selectedValueSocial" selected disabled translate="user_profile.SELECT_SOCIAL"></option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Reddit">Reddit</option>
+                                <option value="Google">Google+</option>
+                                <option value="YouTube">YouTube</option>
+                                <option value="RSS">RSS</option>
+                                <option value="Dropbox">Dropbox</option>
+                                <option value="GitHub">GitHub</option>
+                                <option value="Skype">Skype</option>
+                                <option value="Tumblr">Tumblr</option>
+                                <option value="Vimeo">Vimeo</option>
+                                <option value="WordPress">WordPress</option>
+                                <option value="Yahoo">Yahoo</option>
+                                <option value="Flickr">Flickr</option>
+                            </select>
+                        </div>
+                        <div class="form-group" ng-show="activeFacebook && !showUrlCamp">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+                                <a class="btn btn-wide btn-primary" ng-click="facebookLogin()" ng-show="isConnected">
+                                    <i class="ti-facebook"></i> Continue as {{facebookName}}
+                                </a>
+                            </div>
+                            <a class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 row margin-top-10" ng-click="continueAsOther()" ng-show="isConnected">
+                                <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
+                                <label class="style-link margin-bottom-0" translate="user_profile.CONTINUE_AS_OTHER"></label>
+                            </a>
+                            <a class="btn btn-wide btn-primary" ng-click="facebookLogin()" ng-hide="isConnected">
+                                <i class="ti-facebook" translate="user_profile.LOG_IN_FACEBOOK"></i>
+                            </a>
+                        </div>
+                        <label class="margin-top-10" ng-show="activeFacebook">
+                            <input type="checkbox" ng-model="$parent.manuallyCheck" ng-change="activeManually()">
+                            <strong translate="user_profile.TYPE_URL"></strong>
+                        </label>
+                        <div class="form-group" ng-show="showUrlCamp">
+                            <label for="url" translate="user_profile.SOCIAL_URL"></label>
+                            <div class="error form-hint" id="urlRequired" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''" id="url" name="url" placeholder="{{ 'user_profile.ENTER_SOCIAL_NETWORK_URL' | translate }}" ng-required="true" ng-model="$parent.url">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer padding-15">
+                    <a class="btn btn-primary ButtonRadius margin-top-0" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork()">
+                        <i class="ti-plus"></i>
+                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD"></label>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL SOCIAL NETWORK-->
+
+    <!-- start: MODAL IMAGE CROPPER-->
+    <div class="modal fade" id="ModalImageCropper">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content padding-0">
+                <div class="modal-header padding-0">
+                    <div class="padding-15">
+                        <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <img class="IconSnippet margin-top--3" ng-src="HTML/assets/images/usergray.png"></img>
+                            <label translate="edit_profile.CROP_IMAGE"></label>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <input type="file" id="fileInput" class="btn btn-primary LoadImageModalButton" onchange="angular.element(this).scope().uploadFile(this.files[0])">
+                    <div class="cropArea margin-top-10">
+                        <img-crop image="myImage" result-image-size="150" result-image="myCroppedImage"></img-crop>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL IMAGE CROPPER-->
+
+    <!-- start: MODAL CHANGE PASSWORD-->
+    <div class="modal fade login-register-form" id="modalChangePassword" role="dialog">
+        <div class="modal-dialog modal-sm" ng-controller="FormController">
+            <div class="modal-content">
+                <div class="modal-header padding-0" ng-controller="CloseCtrl">
+                    <div class="padding-15">
+                        <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <i class="ti-key"></i>
+                            <label translate="edit_profile.CHANGE_PASSWORD"></label>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form name="ChangePassword" role="form">
+                        <div class="form-group">
+                            <label for="password" translate="edit_profile.PASSWORD"></label>
+                            <div class="form-hint" translate="edit_profile.TEXT_PASSWORD"></div>
+                            <input type="password" class="form-control ok-password" ng-class="(ChangePassword.password.$dirty && ChangePassword.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" ng-required="true"
+                                ng-model="$parent.password">
+                            <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="againPassHome" translate="edit_profile.PASSWORD_AGAIN"></label>
+                            <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="$parent.againPassHome" pw-check="password">
+                        </div>
+                        <div id="passNotMatch" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
+                            <span class="msg-error" translate="edit_profile.PASSWORD_MATCH"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer padding-15 text-align-center">
+                    <a id="changePasswordButton" class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch" ng-click="changePassword()">
+                        <i class="ti-key"></i>
+                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CHANGE_PASSWORD"></label>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL CHANGE PASSWORD-->
+
+    <!-- start: MODAL ADD T-SHIRTS-->
+    <div class="modal fade login-register-form" id="modalAddTShirt" role="dialog">
+        <div class="modal-dialog modal-md" ng-controller="FormController">
+            <div class="modal-content">
+                <div class="modal-header padding-0" ng-controller="CloseCtrl">
+                    <div class="padding-15">
+                        <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <img ng-src="HTML/assets/images/t-shirt.png" class="width20 margin-top--5">
+                            <label translate="edit_profile.ADD_TSHIRT"></label>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form name="AddTShirts" role="form">
+                        <div class="error form-hint" id="errorAddTShirt" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                        <div class="input-group">
+                            <input class="form-control" ng-class="(AddTShirts.url.$dirty && AddTShirts.url.$invalid) ? 'error' : ''" name="url" placeholder="{{ 'user_profile.ENTER_TSHIRT_CODE' | translate }}" ng-required="true" type="text" id="codeInput" ng-model="$parent.codeModal">
+                            <span class="input-group-btn">
+                                <a class="btn btn-primary" type="button" ng-disabled="AddTShirts.$invalid" ng-click="addTshirt()">
+                                    <i class="ti-check-box"></i>
+                                    <label class="textColorWhite margin-bottom-0" translate="edit_profile.ENTER"></label>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="margin-top-10">
+                            <ul class="list-unstyled">
+                                <li ng-repeat="tshirt in TShirtLinks track by $index">
+                                    <img ng-src="HTML/assets/images/success.png" class="width20" ng-if="tshirt.class == 'success'">
+                                    <img ng-src="HTML/assets/images/wrong.png" class="width20" ng-if="tshirt.class == 'wrong'">
+                                    <label class="margin-left-5">{{tshirt.code}}</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL MODAL ADD T-SHIRTS-->
+
+    <!-- start: MODAL LEAVE MESSAGE-->
+    <div class="modal fade" id="modalLeaveMessageUserProfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" ng-controller="FormController">
+                <div class="modal-header padding-15">
+                    <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
+                        <label translate="user_profile.LEAVE_MESSAGE"></label>
+                    </h4>
+                </div>
+                <div class="modal-body padding-15">
+                    <form name="LeaveMessageUserProfile" role="form">
+                        <div class="form-group">
+                            <div class="error form-hint" id="errorTitleEmpty" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <input type="text" class="form-control" ng-class="(LeaveMessageUserProfile.title.$dirty && LeaveMessageUserProfile.title.$invalid) ? 'error' : ''" id="user" name="title" placeholder="{{ 'user_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
+                        </div>
+                        <div class="form-group">
+                            <div class="error form-hint" id="errorBodyEmpty" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <textarea class="form-control resize-none" ng-class="(LeaveMessageUserProfile.body.$dirty && LeaveMessageUserProfile.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'user_profile.ENTER_MESSAGE' | translate }}" ng-required="true" ng-model="$parent.message.body"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer padding-15">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="LeaveMessageUserProfile.$invalid" ng-click="leaveMessage()">
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
+                        <label class="textColorWhite pointerHover margin-bottom-0" translate="user_profile.SEND_MESSAGE"></label>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL LEAVE MESSAGE-->
+
+    <!-- start: MODAL IMAGE COVER CROPPER-->
+    <div class="modal fade" id="ModalImageCoverCropper">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content padding-0">
+                <div class="modal-header padding-0">
+                    <div class="padding-15">
+                        <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <img class="iconCoverModal" ng-src="HTML/assets/images/coverGray.png"></img>
+                            <label translate="edit_profile.CROP_IMAGE"></label>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-12 backgroundBlueSky margin-bottom-10 padding-bottom-10 padding-top-10">
+                        <input class="textColorWhite" type="file" img-cropper-fileread image="myCroppedCoverImage" />
+                    </div>
+                    <div>
+                        <canvas width="868" height="434" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="1080" crop-height="120" touch-radius="30" crop-area-bounds="bounds"></canvas>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="cropCover()" translate="edit_profile.CROP"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('SocialBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+>>>>>>> dev
 </script>

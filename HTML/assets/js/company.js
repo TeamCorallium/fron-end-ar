@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var Company = function() {
 
     // function to handle slick carousel
@@ -9,4 +10,17 @@ var Company = function() {
             testimonialCarouselHandler();
         }
     };
+=======
+var Company = function() {
+
+    // function to handle slick carousel
+    var testimonialCarouselHandler = function() {
+        $('#testimonial').slick();
+    };
+    return {
+        init: function() {
+            testimonialCarouselHandler();
+        }
+    };
+>>>>>>> dev
 }();

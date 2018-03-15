@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .modal-header {
     padding: 0;
 }
@@ -3188,4 +3189,3322 @@ p:hover .showTextHover {
 
 .colorTextContact {
     color: #8e8e93 !important;
+=======
+.modal-header {
+    padding: 0;
+}
+
+.modal-header .close {
+    padding: 10px 15px;
+}
+
+.modal-header ul {
+    border: none;
+}
+
+.modal-header ul li {
+    margin: 0;
+}
+
+.modal-header ul li a {
+    border: none;
+    border-radius: 0;
+}
+
+.modal-header ul li.active a {
+    color: #e12f27;
+}
+
+.modal-header ul li a:hover {
+    border: none;
+}
+
+.modal-header ul li a span {
+    margin-left: 10px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 10px;
+}
+
+.style-link {
+    color: #00B8B8 !important;
+}
+
+.style-link:hover {
+    cursor: pointer !important;
+    color: #337ab7;
+}
+
+.button-image-left:hover {
+    opacity: 1.0 !important;
+}
+
+.button-image-right:hover {
+    opacity: 1.0 !important;
+}
+
+.resize-none {
+    resize: none !important;
+}
+
+@media (max-width: 991px) {
+    .profile-padding {
+        padding-bottom: 0px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 38% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .margin-top-53 {
+        margin-top: 53px !important;
+    }
+    .paddingTerms {
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+    }
+    .margin-top--15XS {
+        margin-top: -15px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 175px !important;
+        margin-left: 50px !important;
+        color: white !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 10px !important;
+    }
+    #prevImage {
+        position: absolute !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin-top: 24% !important;
+        left: 0px !important;
+        margin-left: 15px !important;
+        background-color: black !important;
+        opacity: 0.4 !important
+    }
+    #nextImage {
+        position: absolute !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin-top: 24% !important;
+        right: 0px !important;
+        margin-right: 15px !important;
+        background-color: black !important;
+        opacity: 0.4 !important
+    }
+    .styleButtonGallery {
+        font-size: 50px !important;
+        margin-left: 23px !important;
+        margin-top: 3px !important;
+        color: white !important;
+    }
+    .marginRightButtonCarouselNext {
+        margin-right: 45px !important;
+    }
+    .IconSlideBackers {
+        width: 50px !important;
+        height: 60px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -300px !important;
+        z-index: 10 !important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -300px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -400px !important;
+    }
+    .iconEye {
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 6px;
+    }
+    .iconEyeHome {
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 6px;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 42px !important;
+        margin-top: 20px !important;
+    }
+    .imageBoxHome {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 42px !important;
+        margin-top: 20px !important;
+    }
+    .paddingLeft50MD {
+        padding-left: 50px !important;
+    }
+    .marginLeft50MD {
+        margin-left: 50px !important;
+    }
+    .paddingRight0MD {
+        padding-right: 0px !important;
+    }
+    .paddingLeft0MD {
+        padding-left: 0px !important;
+    }
+    .borderRight {
+        border-right: 1px solid #E3E3E3 !important;
+    }
+    .paddingLeft15MD {
+        padding-left: 15px !important;
+    }
+    #SocialBox {
+        max-width: 310px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 300px !important;
+        max-height: 55px !important;
+    }
+    .marginButtonEdit {
+        margin-top: 9px !important;
+    }
+    .TitleSnippetBox {
+        width: 93% !important;
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .image_middle {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 15% !important;
+        margin-top: -60% !important;
+    }
+    .imgProfile {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 4px !important;
+        margin-top: 4px !important;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 130px !important;
+        width: 130px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .min-height-80 {
+        min-height: 70px !important;
+    }
+    .button-image-left {
+        margin-top: -42% !important;
+        margin-left: 35% !important;
+        position: absolute !important;
+        border-radius: 100% !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 10px!important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+    .button-image-cover {
+        margin-left: 1% !important;
+        margin-top: 1% !important;
+        position: absolute !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 10px!important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 43% !important;
+        border-radius: 5px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 25% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+    .InboxBox {
+        min-height: 526px !important;
+        max-height: 526px !important;
+    }
+    .OptionsBox {
+        min-height: 546px !important;
+        max-height: 546px !important;
+    }
+    #MessageSendBox,
+    #MessageReadBox,
+    #MessageInboxBox {
+        min-height: 545px !important;
+        max-height: 545px !important;
+    }
+    .displayBlock {
+        display: none !important;
+    }
+    .marginTopFilter {
+        margin-top: 60px !important;
+    }
+    .marginSearch {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 87% !important;
+    }
+    .paddingStyle {
+        margin-top: 10px !important;
+        padding-left: 40px !important;
+    }
+    .paddingStyleNotifications {
+        margin-top: 15px !important;
+        padding-left: 40px !important;
+    }
+    .paddingStyleView {
+        margin-top: 10px !important;
+        padding-left: 40px !important;
+    }
+    .marginTop25XS {
+        margin-top: 25px !important;
+    }
+    .paddingBottom60 {
+        padding-bottom: 60px !important;
+    }
+}
+
+@media (min-width: 770px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -400px !important;
+    }
+    #SocialBox {
+        max-width: 310px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 300px !important;
+        max-height: 55px !important;
+    }
+}
+
+@media (min-width: 801px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -400px !important;
+    }
+    #SocialBox {
+        max-width: 310px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 300px !important;
+        max-height: 55px !important;
+    }
+}
+
+@media (min-width: 851px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -400px !important;
+    }
+    #SocialBox {
+        max-width: 355px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 345px !important;
+        max-height: 55px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 27% !important;
+    }
+}
+
+@media (min-width: 901px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -300px !important;
+    }
+    #SocialBox {
+        max-width: 360px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 350px !important;
+        max-height: 55px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 28% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 951px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -300px !important;
+    }
+    #SocialBox {
+        max-width: 360px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 350px !important;
+        max-height: 55px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 30% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 230px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 30px !important;
+    }
+    .ModalImageSize {
+        width: 900px !important;
+        margin-left: -160px !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 39% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -200px !important;
+    }
+    #floatLogo {
+        margin-left: 24% !important;
+    }
+    .image_middle {
+        margin-left: 10% !important;
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-top: -60% !important;
+    }
+    #SocialBox {
+        max-width: 435px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 425px !important;
+        max-height: 55px !important;
+    }
+    .marginButtonEdit {
+        margin-top: 9px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 28% !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: right !important;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 86% !important;
+    }
+}
+
+@media (min-width: 1001px) {
+    .marginExploreUserHidden {
+        margin-left: 39% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -200px !important;
+    }
+    #floatLogo {
+        margin-left: 24% !important;
+    }
+    #SocialBox {
+        max-width: 420px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 410px !important;
+        max-height: 55px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 29.3% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1051px) {
+    .marginExploreUserHidden {
+        margin-left: 40% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -200px !important;
+    }
+    #floatLogo {
+        margin-left: 33% !important;
+    }
+    #SocialBox {
+        max-width: 420px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 410px !important;
+        max-height: 55px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 30.3% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 40px !important;
+        margin-top: 9px !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1101px) {
+    .marginExploreUserHidden {
+        margin-left: 41% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -100px !important;
+    }
+    #floatLogo {
+        margin-left: 41% !important;
+    }
+    #SocialBox {
+        max-width: 420px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 410px !important;
+        max-height: 55px !important;
+    }
+    .marginButtonEdit {
+        margin-right: 75px !important;
+        margin-top: 9px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 31.4% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1151px) {
+    .marginExploreUserHidden {
+        margin-left: 42% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -100px !important;
+    }
+    #floatLogo {
+        margin-left: 47% !important;
+    }
+    #SocialBox {
+        max-width: 420px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 410px !important;
+        max-height: 55px !important;
+    }
+    .marginButtonEdit {
+        margin-right: 70px !important;
+        margin-top: 9px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 32% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1251px) {
+    .marginExploreUserHidden {
+        margin-left: 44% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        width: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: 0px !important;
+    }
+    #SocialBox {
+        max-width: 600px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 590px !important;
+        max-height: 55px !important;
+    }
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 9px !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .marginTop0XS {
+        margin-top: 0px !important;
+    }
+    .BoxXsWidth {
+        max-width: 767px !important;
+    }
+    .paddingTerms {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .slick-prev {
+        margin-left: -20px !important;
+    }
+    .slick-next {
+        margin-right: -20px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -200px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -200px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 102px !important;
+        margin-left: 250px !important;
+        color: white !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 0 !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 10px !important;
+    }
+    #prevImage {
+        position: absolute !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-top: 22% !important;
+        left: 0px !important;
+        margin-left: 15px !important;
+        background-color: black !important;
+        opacity: 0.4 !important
+    }
+    #nextImage {
+        position: absolute !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-top: 22% !important;
+        right: 0px !important;
+        margin-right: 15px !important;
+        background-color: black !important;
+        opacity: 0.4 !important
+    }
+    .styleButtonGallery {
+        font-size: 30px !important;
+        margin-left: 15px !important;
+        margin-top: 3px !important;
+        color: white !important;
+    }
+    .paddingBottom0XS {
+        padding-bottom: 0px !important;
+    }
+    .borderNoneXS {
+        border: none !important;
+        padding-top: 0px !important;
+    }
+    .track {
+        max-height: 370px !important;
+    }
+    .slide {
+        min-width: 340px !important;
+    }
+    .marginLeft25XS {
+        margin-left: 25px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .IconSlideBackers {
+        width: 30px !important;
+        height: 35px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -400px !important;
+    }
+    .iconEye {
+        position: relative;
+        margin-top: 6px;
+        margin-right: 5% !important;
+        float: right;
+    }
+    .iconEyeHome {
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 6px;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+        margin-top: 20px !important;
+    }
+    .imageBoxHome {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 42px !important;
+        margin-top: 20px !important;
+    }
+    .imgProfile {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 4px !important;
+        margin-top: 4px !important;
+    }
+    .borderBottomXS {
+        border-bottom: 1px solid #E3E3E3 !important;
+    }
+    .inboxSection {
+        min-height: 655px;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+    }
+    .sendInboxSection {
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
+        padding-right: 0px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 37% !important;
+    }
+    #SocialBox {
+        max-width: 700px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 690px !important;
+        max-height: 55px !important;
+    }
+    .marginLeft20XS {
+        margin-left: 20px !important;
+        padding-right: 45px !important;
+    }
+    .marginTop10XS {
+        margin-top: 10px !important;
+    }
+    .TitleSnippetBox {
+        width: 89% !important;
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .marginSnippetXS {
+        margin-left: 0px !important;
+    }
+    #MessageReadBox {
+        display: none;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .marginTopMovil {
+        margin-top: 25px !important;
+    }
+    .marginTopMovil-10 {
+        margin-top: 10px !important;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 180px !important;
+        width: 180px !important;
+        padding: 0px !important;
+        margin-left: 38% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 3% !important;
+    }
+    .AvatarXSBox {
+        width: 10% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 90% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .min-height-80 {
+        min-height: 50px !important;
+    }
+    .center-box {
+        margin-left: 36% !important;
+    }
+    .marginUserHome {
+        margin-left: 33% !important;
+    }
+    .marginExploreUser {
+        margin-left: 33% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 35% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 40.6% !important;
+        border-radius: 5px !important;
+    }
+    .displayBlock {
+        display: block !important;
+    }
+    .centerTextExploreUser {
+        text-align: center !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 92% !important;
+    }
+    .HiddenIfXS {
+        display: none !important;
+    }
+    .paddingLeft15XS {
+        padding-left: 15px !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 32% !important;
+    }
+    .margin-left-13XS {
+        margin-left: 13px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .BoxXsWidth {
+        max-width: 480px !important;
+    }
+    .slick-prev {
+        margin-left: -20px !important;
+    }
+    .slick-next {
+        margin-right: -20px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -160px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -160px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 90px !important;
+        margin-left: 90px !important;
+        color: white !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 42% !important;
+    }
+    .track {
+        max-height: 320px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+        margin-top: 20px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -500px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 27% !important;
+    }
+    #SocialBox {
+        max-width: 420px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 410px !important;
+        max-height: 55px !important;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 32% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 5% !important;
+    }
+    .AvatarXSBox {
+        width: 15% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 85% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .marginUserHome {
+        margin-left: 21% !important;
+    }
+    .marginExploreUser {
+        margin-left: 20% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 28% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 34% !important;
+        border-radius: 5px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 86% !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 20% !important;
+    }
+}
+
+@media (max-width: 415px) {
+    .BoxXsWidth {
+        max-width: 415px !important;
+    }
+    .slick-prev {
+        margin-left: 40px !important;
+    }
+    .slick-next {
+        margin-right: 40px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -150px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -150px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 80px !important;
+        margin-left: 60px !important;
+        color: white !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 40% !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 80px !important;
+    }
+    .track {
+        max-height: 300px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+        margin-top: 20px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -500px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 24% !important;
+    }
+    #SocialBox {
+        max-width: 360px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 350px !important;
+        max-height: 55px !important;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 28% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 6% !important;
+    }
+    .AvatarXSBox {
+        width: 18% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 82% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .marginUserHome {
+        margin-left: 15% !important;
+    }
+    .marginExploreUser {
+        margin-left: 14% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 24% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 31% !important;
+        border-radius: 5px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 83% !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 15% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .BoxXsWidth {
+        max-width: 375px !important;
+    }
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 62px !important;
+        margin-left: 45px !important;
+        color: white !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 38% !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 60px !important;
+    }
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+        margin-top: 20px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -500px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 22% !important;
+    }
+    #SocialBox {
+        max-width: 330px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 320px !important;
+        max-height: 55px !important;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 25% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 6% !important;
+    }
+    .AvatarXSBox {
+        width: 20% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .marginUserHome {
+        margin-left: 10% !important;
+    }
+    .marginExploreUser {
+        margin-left: 10% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 22% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 28% !important;
+        border-radius: 5px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 10% !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .BoxXsWidth {
+        max-width: 360px !important;
+    }
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 62px !important;
+        margin-left: 35px !important;
+        color: white !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 37% !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 55px !important;
+    }
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
+        margin-top: 20px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -500px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 20% !important;
+    }
+    #SocialBox {
+        max-width: 310px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 300px !important;
+        max-height: 55px !important;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 25% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 6% !important;
+    }
+    .AvatarXSBox {
+        width: 20% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
+    }
+    .marginUserHome {
+        margin-left: 8% !important;
+    }
+    .marginExploreUser {
+        margin-left: 8% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 20% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 27% !important;
+        border-radius: 5px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 79% !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 9% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .marginButtonBuy {
+        margin-left: 60px !important;
+    }
+    .BoxXsWidth {
+        max-width: 320px !important;
+    }
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 60px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
+    .PullRightXSif {
+        float: right !important;
+    }
+    .HiddenXSif {
+        display: none !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 35% !important;
+    }
+    .marginXSBackersCarousel {
+        margin-left: 30px !important;
+    }
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: -20px !important;
+        margin-top: 50px !important;
+    }
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 14% !important;
+        margin-top: 20px !important;
+    }
+    .pictureExploreUser {
+        height: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: -500px !important;
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: left !important;
+        margin-left: 16% !important;
+    }
+    #SocialBox {
+        max-width: 280px !important;
+        max-height: 55px !important;
+    }
+    .SizeNetworksList {
+        min-width: 270px !important;
+        max-height: 55px !important;
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 21% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 7% !important;
+    }
+    .AvatarXSBox {
+        width: 25% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
+    }
+    .paddingProfile {
+        padding-top: 45px !important;
+    }
+    .marginUserHome {
+        margin-left: 0% !important;
+    }
+    .marginExploreUser {
+        margin-left: 1% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 15% !important;
+        margin-top: 40px !important;
+    }
+    .marginButtonUserHome {
+        margin-left: 23% !important;
+        border-radius: 5px !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
+    }
+    .qrcodeImage {
+        max-width: 250px !important;
+        margin-left: 1% !important;
+    }
+}
+
+.paddingViewProfile {
+    padding-top: 5px !important;
+}
+
+.button-image-cover:hover {
+    opacity: 1.0 !important;
+}
+
+@media (min-width: 1201px) {
+    .marginExploreUserHidden {
+        margin-left: 43% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        width: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: 0px !important;
+    }
+    .marginButtonEdit {
+        margin-right: 40px !important;
+        margin-top: 9px !important;
+    }
+    #floatLogo {
+        margin-left: 25% !important;
+    }
+    .button-image-cover {
+        margin-left: 1% !important;
+        margin-top: 1% !important;
+        position: absolute !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 9px!important;
+        opacity: 0.5 !important;
+        padding-top: 06px !important;
+    }
+    .button-image-left {
+        margin-top: -42% !important;
+        margin-left: 37% !important;
+        position: absolute !important;
+        border-radius: 100% !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 10px!important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 22.5% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 130px !important;
+        margin-top: 10px !important;
+    }
+    .image_middle {
+        margin-left: 12% !important;
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-top: -60% !important;
+    }
+    .imgProfile {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 4px !important;
+        margin-top: 4px !important;
+    }
+    .image_qrcode {
+        float: left !important;
+        height: 120px !important;
+        width: 120px !important;
+        padding: 0px !important;
+        margin-left: 18% !important;
+    }
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 1251px) {
+    #floatLogo {
+        margin-left: 34% !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 24% !important;
+    }
+}
+
+.margin-0 {
+    margin: 0px !important;
+}
+
+.font-size-30 {
+    font-size: 30px !important;
+}
+
+.padding-left-right-30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.avatar-users {
+    width: 120px !important;
+    height: 120px !important;
+    margin-left: 50px !important;
+}
+
+.avatar-users:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.max-width-160 {
+    max-width: 160px !important;
+}
+
+.user-box {
+    height: 280px !important;
+}
+
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+img-crop {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+img-crop canvas {
+    display: block;
+    left: 50%;
+    outline: 0 none;
+    position: absolute;
+    top: 50%;
+}
+
+.styleBox {
+    position: relative !important;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    height: 330px !important;
+    max-width: 225px !important;
+    border-radius: 7px !important;
+}
+
+.styleBox:hover {
+    box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.styleBoxBackers {
+    color: #666666 !important;
+    position: relative !important;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    height: 95px !important;
+    max-width: 225px !important;
+    border-radius: 7px !important;
+}
+
+.styleBoxBackers:hover {
+    box-shadow: 0 1px 7px -4px #00B8B8 !important;
+    color: #00B8B8 !important;
+}
+
+.buttonContainer {
+    position: absolute !important;
+    bottom: 15px !important;
+    margin-left: 67px !important;
+}
+
+.buttonProfile {
+    border-radius: 1px !important;
+}
+
+.SocialList {
+    display: block;
+    height: 40px;
+    opacity: 0.6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.SocialListPage {
+    display: block;
+    height: 40px;
+    opacity: 0.6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.SocialList:hover {
+    opacity: 1.0 !important;
+}
+
+.HoverWhite {
+    color: #FFFFFF !important;
+}
+
+.padding-top-2 {
+    padding-top: 2px !important;
+}
+
+ul li a.social-ti-facebook {
+    background: #3B5998;
+}
+
+ul li a.social-ti-twitter {
+    background: #48C4D2;
+}
+
+ul li a.social-ti-dribbble {
+    background: #EF5B92;
+}
+
+ul li a.social-ti-google {
+    background: #DD4B39;
+}
+
+ul li a.social-ti-linkedin {
+    background: #71B2D0;
+}
+
+ul li a.social-ti-youtube {
+    background: #F45750;
+}
+
+ul li a.social-ti-rss {
+    background: #FE9900;
+}
+
+ul li a.social-ti-behance {
+    background: #5EB5FB;
+}
+
+ul li a.social-ti-dropbox {
+    background: #85BEEC;
+}
+
+ul li a.social-ti-github {
+    background: #94A5B0;
+}
+
+ul li a.social-ti-skype {
+    background: #70CCEF;
+}
+
+ul li a.social-ti-spotify {
+    background: #8BD05A;
+}
+
+ul li a.social-ti-stumbleupon {
+    background: #F08066;
+}
+
+ul li a.social-ti-tumblr {
+    background: #85A5C3;
+}
+
+ul li a.social-ti-vimeo {
+    background: #7C99A8;
+}
+
+ul li a.social-ti-wordpress {
+    background: #649EB9;
+}
+
+ul li a.social-ti-xing {
+    background: #4F9394;
+}
+
+ul li a.social-ti-yahoo {
+    background: #C38DCF;
+}
+
+ul li a.social-ti-vk {
+    background: #708FAC;
+}
+
+ul li a.social-ti-instagram {
+    background: #CBAA97;
+}
+
+ul li a.social-ti-reddit {
+    background: #FF7A52;
+}
+
+ul li a.social-ti-flickr {
+    background: #FF4DA9;
+}
+
+ul li a.social-ti-foursquare {
+    background: #6FCCF4;
+}
+
+.ColorNavBar {
+    background-color: #EBEBEB !important;
+    height: 65px !important;
+}
+
+.ButtonRadius {
+    border-radius: 4px !important;
+    margin-top: 5px !important;
+}
+
+@media (min-width: 1251px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 23% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 60px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1301px) {
+    .marginExploreUserHidden {
+        margin-left: 43% !important;
+        margin-top: 40px !important;
+    }
+    .pictureExploreUser {
+        width: 100%;
+        display: block;
+        height: 150px !important;
+        margin-left: 0px !important;
+    }
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 23% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 80px !important;
+        margin-top: 9px !important;
+    }
+    #floatLogo {
+        margin-left: 48% !important;
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+    .SizeNetworksList {
+        min-width: 600px !important;
+        max-height: 55px !important;
+    }
+    #SocialBox {
+        max-width: 610px !important;
+        max-height: 55px !important;
+    }
+}
+
+@media (min-width: 1366px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 24.4% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 26% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 145px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 27% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 175px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 28% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 195px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1680px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 29.1% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 220px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 31.8% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 325px !important;
+        margin-top: 9px !important;
+    }
+}
+
+a.ButtonImageSize {
+    min-width: 50px !important;
+    min-height: 50px !important;
+}
+
+.LoadImageModalButton {
+    width: 100% !important;
+}
+
+.ListOptions {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    line-height: 34px;
+    margin-top: 8px;
+}
+
+.MessageFrom {
+    font-weight: bold;
+    margin-top: 2px;
+    color: #aeacb4;
+    font-size: 14px;
+}
+
+.MessageFromSender {
+    font-weight: bold;
+    font-size: 16px !important;
+    margin-top: 2px;
+    color: #0b0b0b;
+    opacity: 0.6;
+}
+
+.MessageFromReceiver {
+    font-size: 12px !important;
+    margin-top: 2px;
+    color: #aeacb4;
+}
+
+.MessageSubject {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+}
+
+.MessageSubjectNoFound {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.MessageTime {
+    right: 15px;
+    top: 8px;
+    color: #8e8e93;
+    font-size: 11px;
+    float: right;
+}
+
+.MessageTimeLeft {
+    right: 15px;
+    top: 8px;
+    color: #8e8e93;
+    font-size: 11px;
+}
+
+.MessageContent {
+    font-size: 12px;
+    color: #c2c2c5;
+    margin-bottom: 4px;
+}
+
+.profile-padding-inbox {
+    min-height: 655px !important;
+    position: relative !important;
+    padding-top: 50px;
+    background-color: #FFFFFF !important;
+}
+
+.OptionsBox {
+    background-color: #ffffff !important;
+}
+
+.InboxBox {
+    background-color: #ffffff !important;
+}
+
+.SendBox {
+    min-height: 526px !important;
+    background-color: #ffffff !important;
+}
+
+.MessageUnread {
+    font-weight: bold !important;
+}
+
+.ReadUnreadBox {
+    width: 5% !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.MessageListBox {
+    width: 95% !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.NoMessage {
+    bottom: 0;
+    left: 0;
+    margin-top: 50%;
+    opacity: 0.5;
+    position: relative;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+}
+
+.IconSnippet {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.IconPublish {
+    width: 17px !important;
+    height: 15px !important;
+    margin-top: -5px !important;
+}
+
+.IconPopular {
+    width: 17px !important;
+    height: 15px !important;
+    margin-top: -1px !important;
+}
+
+.IconEmail {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.IconSnippetBox {
+    width: 25px !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+.form-control.error {
+    border-color: red;
+}
+
+.form-hint {
+    font-size: 7pt;
+    line-height: 9pt;
+    margin: -5px auto 5px;
+    color: #999;
+}
+
+.form-hint.error {
+    color: #C00;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+.password-count {
+    float: right;
+    position: relative;
+    bottom: 27px;
+    right: 10px;
+}
+
+.strength-meter {
+    position: relative;
+    height: 3px;
+    background: #DDD;
+    margin: 10px auto 20px;
+    border-radius: 3px;
+}
+
+.strength-meter:before,
+.strength-meter:after {
+    content: '';
+    height: inherit;
+    background: transparent;
+    display: block;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 0 5px 0 5px;
+    position: absolute;
+    width: 80px;
+    z-index: 10;
+}
+
+.strength-meter:before {
+    left: 70px;
+}
+
+.strength-meter:after {
+    right: 70px;
+}
+
+.strength-meter-fill {
+    background: transparent;
+    height: inherit;
+    position: absolute;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.5s ease-in-out, background 0.25s;
+}
+
+.strength-meter-fill[data-strength='0'] {
+    background: darkred;
+    width: 20%;
+}
+
+.strength-meter-fill[data-strength='1'] {
+    background: orangered;
+    width: 40%;
+}
+
+.strength-meter-fill[data-strength='2'] {
+    background: orange;
+    width: 60%;
+}
+
+.strength-meter-fill[data-strength='3'] {
+    background: yellowgreen;
+    width: 80%;
+}
+
+.strength-meter-fill[data-strength='4'] {
+    background: green;
+    width: 100%;
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+.msg-block {
+    margin-top: 5px;
+}
+
+.msg-error {
+    color: #F00;
+    font-size: 14px;
+}
+
+.cursordefault {
+    cursor: default !important;
+}
+
+.ButtonMoreUser {
+    border: none !important;
+}
+
+.ListMoreUser {
+    min-height: 45px !important;
+    border-bottom: none !important;
+}
+
+.margin-top-80 {
+    margin-top: 80px !important;
+}
+
+.displayBlockAll {
+    display: block !important;
+}
+
+.backgroundMessageSelectedColor {
+    background-color: #cbf4fa !important;
+}
+
+.margin-top-12 {
+    margin-top: 12px !important;
+}
+
+.image-hand {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.font-size-25 {
+    font-size: 25px !important;
+}
+
+.margin-top-21 {
+    margin-top: 21px !important;
+}
+
+.textColorWhite {
+    color: #FFFFFF !important;
+}
+
+span.stars,
+span.stars span {
+    display: block;
+    background: url('../HTML/assets/images/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+.pointerHover:hover {
+    cursor: pointer !important;
+    cursor: hand !important;
+}
+
+
+/* ---------------------------------------------------------------------- */
+
+
+/*  Notification Icons
+/* ---------------------------------------------------------------------- */
+
+.demo-notification-icons notification-icon {
+    display: table;
+    margin: 0 auto;
+}
+
+.custom-style .angular-notifications-icon {
+    left: -10px;
+    background: yellow;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.angular-notifications-icon.my-custom-animation {
+    -moz-transition: linear 0.5s all;
+    -o-transition: linear 0.5s all;
+    -webkit-transition: linear 0.5s all;
+    transition: linear 0.5s all;
+}
+
+.angular-notifications-icon.my-custom-animation-add {
+    background: black;
+    color: white;
+}
+
+.angular-notifications-icon.my-custom-animation-add-active {
+    background: yellow;
+    color: black;
+}
+
+.positionInheritIcon {
+    position: absolute !important;
+    left: 40px !important;
+    line-height: 20px !important;
+    font-size: 14px !important;
+}
+
+.iconClose {
+    position: absolute;
+    top: -1px;
+    z-index: 2;
+    font-size: 9px;
+    left: 33px;
+}
+
+.opacity6 {
+    opacity: 0.6 !important;
+}
+
+.opacity6:hover {
+    opacity: 1.0 !important;
+}
+
+.verticalOverflow {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+
+.iconClap {
+    width: 30px !important;
+    margin-top: -10px !important;
+}
+
+.iconMessage {
+    width: 30px !important;
+    margin-top: -5px !important;
+}
+
+.iconClapMini {
+    width: 16px !important;
+    margin-top: -6px !important;
+}
+
+.adminInfoUser {
+    width: 88% !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.adminDeleteUser {
+    width: 5% !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.NoUserStyles {
+    font-size: 24px !important;
+    text-align: center !important;
+}
+
+.deleteStuffMargin {
+    margin-top: -08px !important;
+}
+
+.colorSuccessStock {
+    color: rgb(10, 228, 10);
+    opacity: 0.6;
+}
+
+.colorErrorStock {
+    color: rgb(207, 7, 7);
+    opacity: 0.6;
+}
+
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.SnippetsArea {
+    resize: none;
+    border: none !important;
+    margin-bottom: 5px !important;
+}
+
+.SnippetFooter {
+    height: 40px;
+}
+
+.borderBox {
+    border: 1px solid #E3E3E3;
+    border-radius: 6px !important;
+}
+
+.ListEdit {
+    margin-top: -9px !important;
+    margin-right: 10px !important;
+}
+
+.DropdownMargin {
+    margin-top: -9px !important;
+}
+
+.DropdownMarginSnippets {
+    margin-top: -9px !important;
+    margin-right: -20px !important;
+}
+
+.margin-top-3 {
+    margin-top: 3px !important;
+}
+
+.colorGrayDark {
+    background-color: #D5D5D5 !important;
+    border-color: #D5D5D5 !important;
+}
+
+.backgroundGray {
+    background-color: #f6f6f6 !important;
+}
+
+.backgroundWhite {
+    background-color: white !important;
+}
+
+.ImagePlusSocialNetwork {
+    max-width: 30px;
+    margin-top: -8px;
+    margin-left: 1px;
+}
+
+.backgroundBlueSky {
+    background-color: #00B8B8 !important;
+}
+
+.borderRadius50 {
+    border-radius: 50px !important;
+}
+
+.font-size-50 {
+    font-size: 50px !important;
+}
+
+.lineMiddleSelect {
+    background-color: #00B8B8;
+    height: 5px;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: -20px;
+}
+
+.borderBottomNone {
+    border-bottom: none !important;
+}
+
+.borderTopFollower {
+    border-top: 1px solid #E3E3E3;
+}
+
+.margin-left--15 {
+    margin-left: -15px;
+}
+
+.padding-top3 {
+    padding-top: 3px !important;
+}
+
+.margin-top3 {
+    margin-top: 3px !important;
+}
+
+.styleNotification {
+    margin-top: 5px !important;
+    float: right !important;
+}
+
+.fontSize20 {
+    font-size: 20px !important;
+}
+
+.fontSize18 {
+    font-size: 18px !important;
+}
+
+.fontSize20 {
+    font-size: 20px !important;
+}
+
+.notificationXSIcon {
+    left: 40px !important;
+    line-height: 10px !important;
+    font-size: 11px !important;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.notificationMDIcon {
+    line-height: 10px !important;
+    font-size: 11px !important;
+    margin-top: 10px;
+}
+
+.styleLiSocial {
+    min-height: 10px !important;
+    padding: 0px !important;
+}
+
+.height30 {
+    height: 30px !important;
+}
+
+.height50 {
+    height: 50px !important;
+}
+
+.font-size-15 {
+    font-size: 15px !important;
+}
+
+.margin-top--3 {
+    margin-top: -3px !important;
+}
+
+.margin-top--2 {
+    margin-top: -2px !important;
+}
+
+.styleBoxConfiguration {
+    min-height: 486px !important;
+}
+
+.styleBoxUserHidden {
+    min-height: 483px !important;
+}
+
+.margin-top--5 {
+    margin-top: -5px !important;
+}
+
+.labelPlus {
+    position: absolute;
+    z-index: 2;
+    margin-top: -20px !important;
+    color: #fff;
+    margin-left: 16.5px !important;
+    font-size: 10px;
+}
+
+.labelPlusXS {
+    position: absolute;
+    z-index: 2;
+    margin-top: -22px !important;
+    color: #fff;
+    margin-left: 9px !important;
+    font-size: 10px;
+}
+
+.labelPlus:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.labelPlusXS:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.notificationMargin {
+    margin-left: -2px !important;
+}
+
+.privatePage {
+    min-height: 640px;
+    position: relative;
+}
+
+.margin-top10PC {
+    margin-top: 10%;
+}
+
+.text-align-center {
+    text-align: center !important;
+}
+
+.font-size-18 {
+    font-size: 18px !important;
+}
+
+.max-width-100 {
+    max-width: 100px !important;
+}
+
+.border-radius6 {
+    border-radius: 6px !important;
+}
+
+.displayInlineFlex {
+    display: inline-flex;
+}
+
+.margin-right-8 {
+    margin-right: 8px !important;
+}
+
+.border-radius50 {
+    border-radius: 50% !important;
+}
+
+.borderQR {
+    border: 1px solid #E3E3E3 !important;
+}
+
+.borderTextAreaSnipets {
+    border-bottom: 1px solid #E3E3E3 !important;
+}
+
+.border-top-clap {
+    border-top: 1px solid #E3E3E3;
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+}
+
+.width20 {
+    width: 20px !important;
+}
+
+.widthheight15 {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.margin-left-7 {
+    margin-left: 7px !important;
+}
+
+.closeModals {
+    color: #858585 !important;
+    opacity: 1.0 !important;
+    margin-right: -15px !important;
+    font-size: 23px !important;
+}
+
+.closeModals:hover {
+    color: #00B8B8 !important;
+}
+
+.nameFollowerFollowing {
+    font-weight: bold !important;
+    font-size: 15px !important;
+}
+
+.borderFollowerFollowing {
+    border-bottom: 1px solid #E3E3E3 !important;
+    padding-bottom: 10px !important;
+}
+
+.borderBottomClap {
+    border-bottom: 1px solid #E3E3E3 !important;
+}
+
+.marginLeft5 {
+    margin-left: 5% !important;
+}
+
+.iconInboxEmail {
+    width: 23px !important;
+    height: 18px !important;
+    margin-top: -5px !important;
+}
+
+.fontSize13 {
+    font-size: 13px !important;
+}
+
+.fontSize14 {
+    font-size: 14px !important;
+}
+
+.fontSize17 {
+    font-size: 17px !important;
+}
+
+.paddingSettingsList {
+    padding: 10px 0 10px 0 !important;
+}
+
+.settingBox {
+    padding-bottom: 17px !important;
+    margin-top: -7px !important;
+    font-size: 17px !important;
+    color: #858585 !important;
+}
+
+.profile-padding-configuration {
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+    padding-bottom: 0px !important;
+}
+
+.textPictureExploreUsers {
+    position: absolute;
+    text-align: center;
+    margin-top: -100px;
+    color: white;
+}
+
+.textPictureExploreUsersSeconds {
+    position: absolute;
+    text-align: center;
+    margin-top: -60px;
+    color: white;
+}
+
+.marginTopButtonUserHidden {
+    margin-top: 280px !important;
+}
+
+.main-content-home {
+    min-height: 100%;
+    position: relative;
+}
+
+.track-wrapper {
+    max-height: 656px !important;
+}
+
+.marginTop--60 {
+    margin-top: -60px !important;
+}
+
+.ui-carousel .carousel-prev .carousel-btn {
+    font-size: 50px !important;
+    left: 0px !important;
+}
+
+.ui-carousel .carousel-next .carousel-btn {
+    font-size: 50px !important;
+    right: 0px !important;
+}
+
+.IconFats {
+    width: 80px !important;
+    height: 60px !important;
+}
+
+.Separator {
+    height: 10px !important;
+    background-color: #00B8B8;
+    width: 100% !important;
+}
+
+.ButtonPrev {
+    margin-top: -140px;
+    position: absolute !important;
+    margin-left: -70px;
+}
+
+.ButtonNext {
+    position: absolute !important;
+    right: 0px !important;
+    margin-top: -140px !important;
+    margin-right: -20px !important;
+}
+
+.ButtonCarousel {
+    background-color: transparent;
+    border: 0px !important;
+}
+
+.styleButtonGallery:hover {
+    color: #00B8B8 !important;
+}
+
+@media (max-width: 992px) {
+    .paddingBottom0XS {
+        padding-bottom: 0px !important;
+    }
+}
+
+.buttonChangeCover {
+    position: absolute !important;
+    margin-top: -40px !important;
+    right: 0px !important;
+    margin-right: 10px !important;
+}
+
+#SocialBox {
+    margin-top: 3px !important;
+}
+
+.iconCover {
+    width: 20px !important;
+    height: 15px !important;
+    margin-top: -3px;
+}
+
+.iconCoverModal {
+    width: 27px !important;
+    height: 20px !important;
+    margin-top: -3px;
+}
+
+.font-size-17 {
+    font-size: 17px !important;
+}
+
+.width30 {
+    width: 30px !important;
+}
+
+.padding-bottom-55 {
+    padding-bottom: 55px !important;
+}
+
+.margin-left--35 {
+    margin-left: -35px !important;
+}
+
+.padding-bottom-70 {
+    padding-bottom: 70px !important;
+}
+
+.font-size-39 {
+    font-size: 39px !important;
+}
+
+.iconPhone {
+    width: 18px !important;
+    height: 15px !important;
+}
+
+figure.effect-zoe {
+    background: rgba(0, 170, 170, 0.8) !important;
+}
+
+.min-height-586 {
+    min-height: 586px !important;
+}
+
+.marginleft3LG {
+    margin-left: -3% !important;
+}
+
+.margin-top-60 {
+    margin-top: 60px !important;
+}
+
+.profile-terms {
+    padding-bottom: 0 !important;
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+}
+
+.styleButtonSocialEmpty {
+    border: 1px solid !important;
+    background-color: white !important;
+    opacity: 0.8 !important;
+}
+
+.profile-padding-view {
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+    padding-bottom: 0px !important;
+}
+
+.mailtoStyle {
+    font-weight: 300;
+    margin-top: 0;
+    color: #5b5b60;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.margin-top--15 {
+    margin-top: -15px !important;
+}
+
+.showTextHover {
+    background: #F8F8F8;
+    color: #5b5b60;
+    position: relative;
+    text-align: left;
+    left: -30px;
+    display: none;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.showTextHover:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 10px;
+    height: 10px;
+    background: #f8f8f8;
+    left: 50%;
+    margin-left: -10px;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+p:hover .showTextHover {
+    display: block;
+}
+
+.height-70 {
+    height: 70px !important;
+}
+
+.margin-top-17 {
+    margin-top: 17px !important;
+}
+
+.padding-Bottom-60 {
+    padding-bottom: 60px !important;
+}
+
+.colorTextBackers {
+    color: #666666 !important;
+}
+
+.hoverColor {
+    color: inherit !important;
+    cursor: default !important;
+}
+
+.lineHeight20 {
+    line-height: 20px !important;
+}
+
+.BorderPageBlue {
+    border-bottom: 3px solid #00B8B8 !important;
+    width: 80px !important;
+    margin-bottom: 10px !important;
+}
+
+.BorderPageBlueTerms {
+    border-bottom: 3px solid #00B8B8 !important;
+    width: 70px !important;
+    margin-bottom: 10px !important;
+}
+
+#HintSocialNetwork {
+    visibility: hidden;
+    z-index: 100 !important;
+}
+
+.SocialHoverText {
+    background-color: #ebebeb;
+    color: #666666;
+}
+
+.confirm {
+    background-color: #00B8B8 !important;
+    border-color: #00B8B8 !important;
+    font-size: 14px !important;
+    width: 90px !important;
+    height: 20px !important;
+}
+
+.cancel {
+    font-size: 14px !important;
+    width: 90px !important;
+    height: 20px !important;
+}
+
+.sweet-alert p {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+}
+
+.sweet-alert h2 {
+    font-size: 18px !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+.paddingStyleUserExplore {
+    padding: 30px 15px 30px 15px !important;
+}
+
+.colorTextContact {
+    color: #8e8e93 !important;
+}
+
+.buttonLeft {
+    position: absolute;
+    right: 70px;
+    height: 30px;
+    width: 30px;
+    bottom: 40px;
+    background-image: url('../img/left.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buttonTop {
+    position: absolute;
+    right: 40px;
+    height: 30px;
+    width: 30px;
+    bottom: 70px;
+    background-image: url('../img/up.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.buttonRight {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    bottom: 40px;
+    background-image: url('../img/right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.buttonDown {
+    position: absolute;
+    right: 40px;
+    height: 30px;
+    width: 30px;
+    bottom: 10px;
+    background-image: url('../img/down.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.buttonRotate {
+    position: absolute;
+    right: 40px;
+    height: 30px;
+    width: 30px;
+    bottom: 40px;
+    background-image: url('../img/rotate.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonScreenshot {
+    position: absolute;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    top: 20px;
+    background-image: url('../img/screenshot.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.rotarText {
+    position: absolute;
+    right: 95px;
+    bottom: 15px;
+    margin-bottom: 0px !important;
+}
+
+#check {
+    position: absolute;
+    right: 75px;
+    bottom: 15px;
+}
+
+#arjsDebugUIContainer {
+    visibility: hidden !important;
+}
+
+.a-enter-vr {
+    visibility: hidden !important;
+}
+
+#myCanvas {
+    visibility: hidden !important;
+}
+
+.rotationX {
+    position: absolute !important;
+    top: 20px !important;
+    left: 40px !important;
+}
+
+.rotationY {
+    position: absolute !important;
+    top: 50px !important;
+    left: 40px !important;
+}
+
+.rotationZ {
+    position: absolute !important;
+    top: 80px !important;
+    left: 40px !important;
+}
+
+#left,
+#top,
+#right,
+#down,
+#screenshotAR {
+    cursor: pointer !important;
+>>>>>>> dev
 }

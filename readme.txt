@@ -1,3 +1,4 @@
+
 1:  Please put the files on a Server or on a Local Development Web Server to preview.
 
 Then to access the preview, type in the address bar of the browser:
@@ -19,4 +20,3 @@ go to the AngularJs-Admin root into the command line
 
 > grunt build:frontend
 to build the 'frontend' folder
-
