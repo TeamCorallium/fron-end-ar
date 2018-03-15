@@ -9,6 +9,8 @@
             "integrity": "sha1-+PLIh60Qv2f2NPAFtph/7TF5qsg=",
             "version": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
         },
+        "aframe-always-fullscreen-component": "^1.0.0",
+        "aframe-mouse-cursor-component": "^0.5.2",
         "ajv": {
             "dev": true,
             "integrity": "sha1-wG9Zh3jETGsWGrr+NGa4GtGBTtI=",
@@ -505,6 +507,7 @@
             },
             "version": "http://registry.npmjs.org/camelcase-keys/-/camelcase-keys-2.1.0.tgz"
         },
+        "canvas-to-image": "^2.0.0",
         "cardinal": {
             "dev": true,
             "integrity": "sha1-fRCq+yCDe94EPEXkOgyMKM2q5F4=",
