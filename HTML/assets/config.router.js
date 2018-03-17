@@ -84,10 +84,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/terms',
             templateUrl: 'HTML/views/termsAndConditions.html',
             resolve: loadSequence('termsCtrl')
-        }).state('ar', {
-            url: '/ar',
-            templateUrl: 'HTML/views/ar/arView.html',
-            resolve: loadSequence('arCtrl')
         }).state('object', {
             url: '/object',
             templateUrl: 'HTML/views/ar/objectView.html',

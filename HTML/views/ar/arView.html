@@ -1,74 +1,137 @@
-<script>
-    var type = '';
+<!DOCTYPE html>
+<html lang="en" ng-app="dirApp">
 
-    function getOrientation() {
-        type = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
-    };
-    getOrientation();
+<head>
+    <title> &#60;DIRS&#62; Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    function leftKeepFunction() {
-        if (type == 'Portrait') {
-            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
-            document.querySelector('#object3dLandscape').style.visibility = "none";
-        } else {
-            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
-            document.querySelector('#object3dPortrait').style.visibility = "none";
+    <link href="../../assets/css/css-ar.css" rel="stylesheet" media="screen" />
+
+    <!-- start: FAVICON -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+    <!-- end: FAVICON -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113455025-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
         }
-        obj3D.set(obj3D.x - 0.05, obj3D.y, obj3D.z);
-    };
+        gtag('js', new Date());
 
-    function topKeepFunction() {
-        if (type == 'Portrait') {
-            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
-            document.querySelector('#object3dLandscape').style.visibility = "none";
-        } else {
-            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
-            document.querySelector('#object3dPortrait').style.visibility = "none";
-        }
-        obj3D.set(obj3D.x, obj3D.y, obj3D.z - 0.05);
-    };
+        gtag('config', 'UA-113455025-1');
+    </script>
 
-    function rightKeepFunction() {
-        if (type == 'Portrait') {
-            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
-            document.querySelector('#object3dLandscape').style.visibility = "none";
-        } else {
-            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
-            document.querySelector('#object3dPortrait').style.visibility = "none";
-        }
-        obj3D.set(obj3D.x + 0.05, obj3D.y, obj3D.z);
-    };
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5QS5SN5');
+    </script>
+    <!-- End Google Tag Manager -->
 
-    function downKeepFunction() {
-        if (type == 'Portrait') {
-            var obj3D = document.querySelector('#object3dPortrait').object3D.position;
-            document.querySelector('#object3dLandscape').style.visibility = "none";
-        } else {
-            var obj3D = document.querySelector('#object3dLandscape').object3D.position;
-            document.querySelector('#object3dPortrait').style.visibility = "none";
-        }
-        obj3D.set(obj3D.x, obj3D.y, obj3D.z + 0.05);
-    };
-</script>
-<div class="profile-padding background-light" ng-controller="ArCtrl">
-    <div class="row">
-        <a-scene screenshot=" width: {{widthScreen}}; height: {{heightScreen}}" embeded id="sceneAR" always-fullscreen="platform:all; debug:false" arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono_matrix; maxDetectionRate: 30;'>
-            <a-marker-camera mouse-cursor preset='custom' type='pattern' url='{{patterDir}}'>
-                <a-entity visible="{{portrait}}" rotation="330 0 0" id="object3dPortrait" scale="0.8 0.4 0.6" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
-                    <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
-                </a-entity>
-                <a-entity visible="{{landscape}}" rotation="330 0 0" id="object3dLandscape" scale="0.8 0.8 0.8" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
-                    <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
-                </a-entity>
-                <a-cursor visible="false"></a-cursor>
-            </a-marker-camera>
-        </a-scene>
 
-        <button ng-click="screenshotFunction()" id="screenshotAR" class="buttonScreenshot"></button>
+</head>
+<!-- end: HEAD -->
 
-        <input onmousedown="tempo = setInterval('leftKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="leftFunction()" id="left" type="button" class="btn buttonLeft"></input>
-        <input onmousedown="tempo = setInterval('topKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="topFunction()" id="top" type="button" class="btn buttonTop"></input>
-        <input onmousedown="tempo = setInterval('rightKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="rightFunction()" id="right" type="button" class="btn buttonRight"></input>
-        <input onmousedown="tempo = setInterval('downKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="downFunction()" id="down" type="button" class="btn buttonDown"></input>
+<body>
+    <script>
+        var type = '';
+    
+        function getOrientation() {
+            type = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+        };
+        getOrientation();
+    
+        function leftKeepFunction() {
+            if (type == 'Portrait') {
+                var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+                document.querySelector('#object3dLandscape').style.visibility = "none";
+            } else {
+                var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+                document.querySelector('#object3dPortrait').style.visibility = "none";
+            }
+            obj3D.set(obj3D.x - 0.05, obj3D.y, obj3D.z);
+        };
+    
+        function topKeepFunction() {
+            if (type == 'Portrait') {
+                var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+                document.querySelector('#object3dLandscape').style.visibility = "none";
+            } else {
+                var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+                document.querySelector('#object3dPortrait').style.visibility = "none";
+            }
+            obj3D.set(obj3D.x, obj3D.y, obj3D.z - 0.05);
+        };
+    
+        function rightKeepFunction() {
+            if (type == 'Portrait') {
+                var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+                document.querySelector('#object3dLandscape').style.visibility = "none";
+            } else {
+                var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+                document.querySelector('#object3dPortrait').style.visibility = "none";
+            }
+            obj3D.set(obj3D.x + 0.05, obj3D.y, obj3D.z);
+        };
+    
+        function downKeepFunction() {
+            if (type == 'Portrait') {
+                var obj3D = document.querySelector('#object3dPortrait').object3D.position;
+                document.querySelector('#object3dLandscape').style.visibility = "none";
+            } else {
+                var obj3D = document.querySelector('#object3dLandscape').object3D.position;
+                document.querySelector('#object3dPortrait').style.visibility = "none";
+            }
+            obj3D.set(obj3D.x, obj3D.y, obj3D.z + 0.05);
+        };
+    </script>
+    <div class="profile-padding background-light" ng-controller="ArCtrl">
+        <div class="row">
+            <a-scene screenshot=" width: {{widthScreen}}; height: {{heightScreen}}" embeded id="sceneAR" always-fullscreen="platform:all; debug:false" arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono_matrix; maxDetectionRate: 30;'>
+                <a-marker-camera mouse-cursor preset='custom' type='pattern' url='{{patterDir}}'>
+                    <a-entity visible="{{portrait}}" rotation="330 0 0" id="object3dPortrait" scale="0.8 0.4 0.6" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
+                        <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+                    </a-entity>
+                    <a-entity visible="{{landscape}}" rotation="330 0 0" id="object3dLandscape" scale="0.8 0.8 0.8" position='0 0 0' obj-model="obj:url({{objectUrl}}); mtl:url({{mtlUrl}})">
+                        <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+                    </a-entity>
+                    <a-cursor visible="false"></a-cursor>
+                </a-marker-camera>
+            </a-scene>
+    
+            <button ng-click="screenshotFunction()" id="screenshotAR" class="buttonScreenshot"></button>
+    
+            <input onmousedown="tempo = setInterval('leftKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="leftFunction()" id="left" type="button" class="btn buttonLeft"></input>
+            <input onmousedown="tempo = setInterval('topKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="topFunction()" id="top" type="button" class="btn buttonTop"></input>
+            <input onmousedown="tempo = setInterval('rightKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="rightFunction()" id="right" type="button" class="btn buttonRight"></input>
+            <input onmousedown="tempo = setInterval('downKeepFunction()',300); return false" onmouseup="clearInterval(tempo)" ng-click="downFunction()" id="down" type="button" class="btn buttonDown"></input>
+        </div>
     </div>
-</div>
+
+    <script src="../../assets/js/aframe/aframe.js"></script>
+    <script src="../../assets/js/aframe/aframe-ar.js"></script>
+    <script src="../../../node_modules/canvas-to-image/js/canvas-to-image.js"></script>
+    <script src="../../../node_modules/aframe-always-fullscreen-component/dist/aframe-always-fullscreen-component.js"></script>
+    <script src="../../../node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.js"></script>
+    <script src="../../assets/js/controllers/arCtrl.js"></script>
+</body>
+
+</html>
