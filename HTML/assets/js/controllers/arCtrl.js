@@ -4,6 +4,10 @@ app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
         $scope.objectUrl = './HTML/assets/objects/cubo.obj';
         $scope.mtlUrl = './HTML/assets/objects/cubo.mtl';
 
+        document.getElementById('header').style.visibility = 'hidden';
+        document.getElementById('separator').style.visibility = 'hidden';
+        document.getElementById('footer').style.visibility = 'hidden';
+
         $scope.valueCheck = false;
 
         $scope.type = '';

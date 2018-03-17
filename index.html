@@ -71,7 +71,7 @@
     <span us-spinner="{radius:30, width:8, length: 16}"></span>
     <div id="app">
         <!-- start: HEADER -->
-        <header class="small-header height-50">
+        <header id="header" class="small-header height-50">
             <div class="navbar navbar-default backgroundWhite" role="navigation">
                 <!-- start: TOP NAVIGATION CONTAINER -->
                 <div class="container">
@@ -406,7 +406,7 @@
                 <i class="fa fa-angle-up"></i>
             </a>
             <!-- start: FOOTER -->
-            <section class="container-fluid container-fullw bg-white padding-top-0 padding-left-0 padding-right-0 paddingBottom0XS borderNoneXS">
+            <section id="separator" class="container-fluid container-fullw bg-white padding-top-0 padding-left-0 padding-right-0 paddingBottom0XS borderNoneXS">
                 <div class="Separator"></div>
             </section>
             <footer id="footer" class="borderNoneXS">
@@ -444,10 +444,7 @@
         </div>
         <!-- end: APP CONTENT -->
     </div>
-
-
-    <script src="HTML/assets/js/aframe/aframe.js"></script>
-    <script src="HTML/assets/js/aframe/aframe-ar.js"></script>
+    
     <script src="dist/app.js"></script>
     <script src="bower_components/angular-img-cropper/dist/angular-img-cropper.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -456,6 +453,9 @@
 
     <script src="bower_components/angular-spinner/angular-spinner.min.js"></script>
     <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+
+    <script src="HTML/assets/js/aframe/aframe.js"></script>
+    <script src="HTML/assets/js/aframe/aframe-ar.js"></script>
 
     <script>
         jQuery(document).ready(function() {

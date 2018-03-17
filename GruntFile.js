@@ -90,8 +90,9 @@ module.exports = function(grunt) {
                     'HTML/assets/js/filters/*.js',
                     'node_modules/ng-file-upload/dist/ng-file-upload.js',
                     'node_modules/canvas-to-image/js/canvas-to-image.js',
+                    'node_modules/platform/platform.js',
                     'node_modules/aframe-always-fullscreen-component/dist/aframe-always-fullscreen-component.js',
-                    'node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.js'
+                    'node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.min.js'
                 ],
                 dest: 'dist/app.js'
             },

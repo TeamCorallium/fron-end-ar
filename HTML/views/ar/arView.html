@@ -50,7 +50,7 @@
         obj3D.set(obj3D.x, obj3D.y, obj3D.z + 0.05);
     };
 </script>
-<div class="profile-padding background-light" ng-controller="ArCtrl">
+<div class="profile-paddingAR" ng-controller="ArCtrl">
     <div class="row">
         <a-scene screenshot=" width: {{widthScreen}}; height: {{heightScreen}}" embeded id="sceneAR" always-fullscreen="platform:all; debug:false" arjs='debugUIEnabled: false; sourceType: webcam; detectionMode: mono_matrix; maxDetectionRate: 30;'>
             <a-marker-camera mouse-cursor preset='custom' type='pattern' url='{{patterDir}}'>
