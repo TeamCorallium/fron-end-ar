@@ -3191,7 +3191,7 @@ p:hover .showTextHover {
 }
 
 .buttonLeft {
-    position: absolute;
+    position: absolute !important;
     right: 70px;
     height: 30px;
     width: 30px;
@@ -3205,7 +3205,7 @@ p:hover .showTextHover {
 }
 
 .buttonTop {
-    position: absolute;
+    position: absolute !important;
     right: 40px;
     height: 30px;
     width: 30px;
@@ -3219,7 +3219,7 @@ p:hover .showTextHover {
 }
 
 .buttonRight {
-    position: absolute;
+    position: absolute !important;
     right: 10px;
     height: 30px;
     width: 30px;
@@ -3233,7 +3233,7 @@ p:hover .showTextHover {
 }
 
 .buttonDown {
-    position: absolute;
+    position: absolute !important;
     right: 40px;
     height: 30px;
     width: 30px;
@@ -3258,7 +3258,7 @@ p:hover .showTextHover {
 } */
 
 .buttonScreenshot {
-    position: absolute;
+    position: absolute !important;
     right: 20px;
     height: 40px;
     width: 40px;
