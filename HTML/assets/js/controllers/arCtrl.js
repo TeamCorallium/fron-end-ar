@@ -8,6 +8,8 @@ app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
         document.getElementById('separator').style.visibility = 'hidden';
         document.getElementById('footer').style.visibility = 'hidden';
 
+        
+
         $scope.valueCheck = false;
 
         $scope.type = '';
@@ -30,6 +32,8 @@ app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
             $scope.widthScreen = $(window).width();
             $scope.heightScreen = $(window).height();
         };
+
+        document.getElementsByClassName('profile-paddingAR').style.height = $scope.widthScreen+"px !important";
 
         getOrientation();
 
