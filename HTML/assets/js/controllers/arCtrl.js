@@ -33,7 +33,7 @@ app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
             $scope.heightScreen = $(window).height();
         };
 
-        document.getElementsByClassName('profile-paddingAR').style.height = $scope.widthScreen+"px !important";
+        document.getElementById('profile-paddingAR').style.height = $scope.widthScreen+"px !important";
 
         getOrientation();
 
