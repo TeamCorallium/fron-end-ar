@@ -91,11 +91,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
         }).state('object3d', {
             url: '/object3d',
             templateUrl: 'HTML/views/ar/objectARView.html',
-            resolve: loadSequence('ObjectARCtrl')
+            resolve: loadSequence('objectARCtrl')
         }).state('gallery', {
             url: '/gallery',
             templateUrl: 'HTML/views/ar/galleryView.html',
-            resolve: loadSequence('GalleryCtrl')
+            resolve: loadSequence('galleryCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)

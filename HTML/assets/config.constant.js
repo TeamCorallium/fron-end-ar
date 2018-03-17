@@ -22,6 +22,8 @@ app.constant('JS_REQUIRED', {
         'userPrivateCtrl': 'HTML/assets/js/controllers/userPrivateCtrl.js',
         'termsCtrl': 'HTML/assets/js/controllers/termsCtrl.js',
         'privacyCtrl': 'HTML/assets/js/controllers/privacyCtrl.js',
-        'arCtrl': 'HTML/assets/js/controllers/arCtrl.js'
+        'arCtrl': 'HTML/assets/js/controllers/arCtrl.js',
+        'galleryCtrl': 'HTML/assets/js/controllers/galleryCtrl.js',
+        'objectARCtrl': 'HTML/assets/js/controllers/objectARCtrl.js'
     }
 });
