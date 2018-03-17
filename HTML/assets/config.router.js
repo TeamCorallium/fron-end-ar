@@ -88,9 +88,9 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/ar',
             templateUrl: 'HTML/views/ar/arView.html',
             resolve: loadSequence('arCtrl')
-        }).state('object3d', {
-            url: '/object3d',
-            templateUrl: 'HTML/views/ar/objectARView.html',
+        }).state('object', {
+            url: '/object',
+            templateUrl: 'HTML/views/ar/objectView.html',
             resolve: loadSequence('objectARCtrl')
         }).state('gallery', {
             url: '/gallery',
