@@ -325,6 +325,55 @@
     .paddingBottom60 {
         padding-bottom: 60px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 770px) {
@@ -346,6 +395,55 @@
         min-width: 300px !important;
         max-height: 55px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 801px) {
@@ -366,6 +464,55 @@
     .SizeNetworksList {
         min-width: 300px !important;
         max-height: 55px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -391,6 +538,55 @@
     .SocialIcon {
         margin-top: 2px !important;
         margin-left: 27% !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -422,6 +618,55 @@
         min-height: 180px !important;
         margin-top: 10px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 951px) {
@@ -451,6 +696,55 @@
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 220px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -514,6 +808,55 @@
         float: left;
         width: 86% !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 60px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 60px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 30px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1001px) {
@@ -546,6 +889,55 @@
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -584,6 +976,55 @@
         min-height: 180px !important;
         margin-top: 10px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1101px) {
@@ -620,6 +1061,55 @@
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -658,6 +1148,55 @@
         min-height: 180px !important;
         margin-top: 10px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1251px) {
@@ -687,6 +1226,55 @@
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -961,6 +1549,55 @@
     .margin-left-13XS {
         margin-left: 13px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 180px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1095,6 +1732,55 @@
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 20% !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 180px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -1234,6 +1920,55 @@
         max-width: 250px !important;
         margin-left: 15% !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 180px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1372,6 +2107,55 @@
         max-width: 250px !important;
         margin-left: 10% !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 180px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1509,6 +2293,55 @@
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 9% !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 180px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -1656,6 +2489,55 @@
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 1% !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 190px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 160px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 130px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -2047,6 +2929,55 @@ ul li a.social-ti-foursquare {
         max-width: 610px !important;
         max-height: 55px !important;
     }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1366px) {
@@ -2054,9 +2985,61 @@ ul li a.social-ti-foursquare {
         margin-top: 2px !important;
         margin-left: 24.4% !important;
     }
+    #ar{
+        margin-top: 170px !important;
+    }
     .marginButtonEdit {
         margin-right: 100px !important;
         margin-top: 9px !important;
+    }
+    .buttonLeft {
+        position: absolute !important;
+        right: 70px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }    
+    .buttonTop {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 150px;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }    
+    .buttonRight {
+        position: absolute !important;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        bottom: 120px;
+        background-color: black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonDown {
+        position: absolute !important;
+        right: 40px;
+        height: 30px;
+        width: 30px;
+        bottom: 90px;
+        background-color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }    
+    .buttonScreenshot {
+        position: absolute !important;
+        right: 20px;
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        background-color: black;
+        border-radius: 20px;
     }
 }
 
@@ -3190,99 +4173,6 @@ p:hover .showTextHover {
     color: #8e8e93 !important;
 }
 
-.buttonLeft {
-    position: absolute !important;
-    right: 70px;
-    height: 30px;
-    width: 30px;
-    bottom: 40px;
-    /* background-image: url('../img/left.png'); */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.buttonTop {
-    position: absolute !important;
-    right: 40px;
-    height: 30px;
-    width: 30px;
-    bottom: 70px;
-    /* background-image: url('../img/up.png'); */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.buttonRight {
-    position: absolute !important;
-    right: 10px;
-    height: 30px;
-    width: 30px;
-    bottom: 40px;
-    /* background-image: url('../img/right.png'); */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.buttonDown {
-    position: absolute !important;
-    right: 40px;
-    height: 30px;
-    width: 30px;
-    bottom: 10px;
-    /* background-image: url('../img/down.png'); */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-/* .buttonRotate {
-    position: absolute;
-    right: 40px;
-    height: 30px;
-    width: 30px;
-    bottom: 40px;
-    background-image: url('../img/rotate.png');
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
-.buttonScreenshot {
-    position: absolute !important;
-    right: 20px;
-    height: 40px;
-    width: 40px;
-    top: 20px;
-    /* background-image: url('../img/screenshot.png'); */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-}
-
-.rotarText {
-    position: absolute;
-    right: 95px;
-    bottom: 15px;
-    margin-bottom: 0px !important;
-}
-
-#check {
-    position: absolute;
-    right: 75px;
-    bottom: 15px;
-}
-
 #arjsDebugUIContainer {
     visibility: hidden !important;
 }
@@ -3293,24 +4183,6 @@ p:hover .showTextHover {
 
 #myCanvas {
     visibility: hidden !important;
-}
-
-.rotationX {
-    position: absolute !important;
-    top: 20px !important;
-    left: 40px !important;
-}
-
-.rotationY {
-    position: absolute !important;
-    top: 50px !important;
-    left: 40px !important;
-}
-
-.rotationZ {
-    position: absolute !important;
-    top: 80px !important;
-    left: 40px !important;
 }
 
 #left,

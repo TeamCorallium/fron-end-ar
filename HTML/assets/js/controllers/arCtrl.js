@@ -31,9 +31,10 @@ app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
 
             $scope.widthScreen = $(window).width();
             $scope.heightScreen = $(window).height();
+            
+            document.getElementById('ar').style.height = $scope.heightScreen + 'px';
+            document.getElementById('ar').style.width = $scope.widthScreen + 'px';
         };
-
-        document.getElementById('ar').style.height = $scope.heightScreen + 'px';
 
         getOrientation();
 
