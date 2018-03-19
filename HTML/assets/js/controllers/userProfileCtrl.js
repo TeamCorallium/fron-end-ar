@@ -1449,5 +1449,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             element.style.visibility = "hidden";
             $scope.SocialActive = '';
         };
+
+        $scope.goToGallery = function() {
+            $state.go('gallery');
+        };
     }
 ]);
