@@ -4238,3 +4238,7 @@ p:hover .showTextHover {
 #screenshotAR {
     cursor: pointer !important;
 }
+
+#ARButton{
+    visibility: hidden !important;
+}

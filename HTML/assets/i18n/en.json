@@ -126,7 +126,9 @@
         "LOGIN_PROBLEM": "Login Problems",
         "SEE_PROFILE": "See Profile",
         "NO_UNFOLLOW": "Error when attempting to unfollow this user",
-        "CHANGE_COVER": "Change cover"
+        "CHANGE_COVER": "Change cover",
+        "GO_TO_GALLERY": "Go to gallery",
+        "GO_TO_AR": "Augmented Reality"
     },
     "view_profile": {
         "RATING": "Rating:",

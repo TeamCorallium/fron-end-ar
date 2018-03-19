@@ -1453,5 +1453,34 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.goToGallery = function() {
             $state.go('gallery');
         };
+
+        var ScriptLoad = function(url, callback) {
+            var script = document.createElement('script');
+
+            if (script.readyState) { // Internet Explorer
+                script.onreadystatechange = function() {
+                    if (script.readyState === 'loaded' || script.readyState === 'complete') {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else { // Otros Navegadores
+                script.onload = function() {
+                    callback();
+                };
+            }
+
+            script.src = url;
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
+
+        jQuery(window).load(function () {
+            ScriptLoad('HTML/assets/js/aframe/aframe.js', null);
+            ScriptLoad('HTML/assets/js/aframe/aframe-ar.js', $scope.AframeLoaded());
+        });
+
+        $scope.AframeLoaded = function(){
+            document.getElementById('ARButton').style.visibility = "block !important";
+        };
     }
 ]);
