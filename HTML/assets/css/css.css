@@ -4242,3 +4242,75 @@ p:hover .showTextHover {
 #ARButton{
     visibility: hidden !important;
 }
+
+.imagePress {
+    width: 140px !important;
+    height: 110px !important;
+    padding: 0 !important;
+}
+
+.imagePressVistar{
+    width: 120px !important;
+    height: 110px !important;
+    padding: 0 !important;
+    margin-left: 10px !important;
+}
+
+.imagePressEnganchate{
+    width: 140px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    margin-top: 30px !important;
+}
+
+.imagePressADS{
+    width: 140px !important;
+    height: 80px !important;
+    padding: 0 !important;
+    margin-top: 10px !important;
+}
+
+.imagePressNews{
+    width: 140px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+}
+
+.imagePressIberoamerica{
+    width: 140px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.imagePressCentral{
+    width: 140px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.imagePress14{
+    width: 140px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.imagePressUnion{
+    width: 140px !important;
+    height: 70px !important;
+    padding: 0 !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.padding-left-70{
+    padding-left: 70px !important;
+    padding-right: 0px !important;
+}

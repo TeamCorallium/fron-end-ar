@@ -24,6 +24,7 @@ app.constant('JS_REQUIRED', {
         'privacyCtrl': 'HTML/assets/js/controllers/privacyCtrl.js',
         'arCtrl': 'HTML/assets/js/controllers/arCtrl.js',
         'galleryCtrl': 'HTML/assets/js/controllers/galleryCtrl.js',
-        'objectARCtrl': 'HTML/assets/js/controllers/objectARCtrl.js'
+        'objectARCtrl': 'HTML/assets/js/controllers/objectARCtrl.js',
+        'pressCtrl': 'HTML/assets/js/controllers/pressCtrl.js'
     }
 });

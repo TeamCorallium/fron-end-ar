@@ -96,6 +96,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/gallery',
             templateUrl: 'HTML/views/ar/galleryView.html',
             resolve: loadSequence('galleryCtrl')
+        }).state('press', {
+            url: '/press',
+            templateUrl: 'HTML/views/press.html',
+            resolve: loadSequence('pressCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)

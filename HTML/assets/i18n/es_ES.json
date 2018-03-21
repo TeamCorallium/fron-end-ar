@@ -41,7 +41,8 @@
         "ADD_SOCIAL": "Red Social",
         "CONFIGURATIONS": "Configuración",
         "TERMS": "Términos y Condiciones",
-        "PRIVACY": "Privacidad"
+        "PRIVACY": "Privacidad",
+        "PRESS": "Prensa"
     },
     "user_profile": {
         "RATING": "Valoración:",

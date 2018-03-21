@@ -128,7 +128,8 @@
         "NO_UNFOLLOW": "尝试取消追随此用户时出错",
         "CHANGE_COVER": "更改封面",
         "GO_TO_GALLERY": "转到库",
-        "GO_TO_AR": "增强现实"
+        "GO_TO_AR": "增强现实",
+        "PRESS": "按"
     },
     "view_profile": {
         "RATING": "评级:",
