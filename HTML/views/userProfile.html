@@ -410,7 +410,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS hidden-xs">
+                <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS hidden-xs">
                     <div class="paddingViewProfile">                        
                         <div class="padding-top-20">
                             <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-sm-12 margin-bottom-10" ng-click="goToGallery()">
@@ -423,6 +423,51 @@
                                 <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.GO_TO_AR"></label>
                             </a>
                         </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS hidden-xs">
+                    <div class="paddingViewProfile">
+                        <aside class="sidebar">
+                            <div class="tabbable">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs nav-justified">
+                                        <li class="active">
+                                            <a data-toggle="tab">
+                                                <img class="IconPopular" ng-src="HTML/assets/images/popular.png"></img>
+                                                <label translate="user_profile.POPULAR_USER"></label>
+                                            </a>
+                                            <hr class="tall margin-0">
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active padding-bottom-0" id="popularUsers">
+                                            <ul class="post-list">
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
+                                                    <div class="post-image">
+                                                        <div class="img-thumbnail">
+                                                            <a ng-disabled="!popularUser.confVisible" ng-click="goToProfile(popularUser.owner)">
+                                                                <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-info">
+                                                        <a class="MessageUnread fontSize13" ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a class="MessageUnread fontSize13" ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <h5 class="lineHeight20">{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    </div>
+                                                </li>
+                                                <!-- <li class="ListMoreUser center">
+                                                    <a type="button" class="btn btn-primary" ui-sref='users'>
+                                                        <i class="ti-arrow-right"></i>
+                                                        <label class="pointerHover textColorWhite margin-bottom-0" translate="user_profile.SEE_MORE"></label>
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
