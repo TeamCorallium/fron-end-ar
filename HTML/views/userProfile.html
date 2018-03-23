@@ -598,13 +598,13 @@
                         <div class="form-group">
                             <label for="password" translate="edit_profile.PASSWORD"></label>
                             <div class="form-hint" translate="edit_profile.TEXT_PASSWORD"></div>
-                            <input type="password" class="form-control ok-password" ng-class="(ChangePassword.password.$dirty && ChangePassword.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" ng-required="true"
+                            <input type="password" autocomplete="off" class="form-control ok-password" ng-class="(ChangePassword.password.$dirty && ChangePassword.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" ng-required="true"
                                 ng-model="$parent.password">
                             <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                         </div>
                         <div class="form-group">
                             <label for="againPassHome" translate="edit_profile.PASSWORD_AGAIN"></label>
-                            <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="$parent.againPassHome" pw-check="password">
+                            <input type="password" autocomplete="off" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="$parent.againPassHome" pw-check="password">
                         </div>
                         <div id="passNotMatch" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
                             <span class="msg-error" translate="edit_profile.PASSWORD_MATCH"></span>

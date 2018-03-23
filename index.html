@@ -268,13 +268,13 @@
                                 <div class="form-group">
                                     <label for="password" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
-                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
+                                    <input autocomplete="off" type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
                                         ng-model="$parent.password">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
-                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" pw-check="password">
+                                    <input ng-model="$parent.passAgain" autocomplete="off" type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" pw-check="password">
                                 </div>
                                 <div id="errorPasswordMatch" class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
@@ -331,12 +331,12 @@
                                 <div class="form-group">
                                     <label for="pass" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
-                                    <input ng-model="$parent.password" type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true">
+                                    <input ng-model="$parent.password" autocomplete="off" type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
-                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" pw-check="pass">
+                                    <input ng-model="$parent.passAgain" autocomplete="off" type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" pw-check="pass">
                                 </div>
                                 <div id="errorPasswordRegisterMatch" class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
@@ -383,7 +383,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pwdHome" translate="index.PASSWORD"></label>
-                                    <input ng-model="$parent.pwdHome" type="password" class="form-control" id="pwdHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pwdHome">
+                                    <input ng-model="$parent.pwdHome" autocomplete="off" type="password" class="form-control" id="pwdHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pwdHome">
                                 </div>
                                 <div class="msg-block" id="errorBoxHome" hidden>
                                     <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
