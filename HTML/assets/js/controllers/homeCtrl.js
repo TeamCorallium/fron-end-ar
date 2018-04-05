@@ -12,7 +12,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         } else {
             $rootScope.connected = false;
         }
-
+        
         $rootScope.viewProfile = true;
         $scope.countLimit = 4;
         $scope.profiles = [];
@@ -22,41 +22,203 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             timeOnSite: 0,
             unique: 0
         };
-
-        if ($(window).width() >= 992) {
-            $scope.countLimit = 4;
-        } else if ($(window).width() >= 768) {
-            $scope.countLimit = 3;
-        }
-
+        
         $scope.countBackers = 4;
 
-        if ($(window).width() >= 992) {
+        if ($(window).width() >= 1366){
+            $scope.videoWidth = $(window).width()-280;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
             $scope.countBackers = 4;
+        } else if ($(window).width() >= 1350) {
+            $scope.videoWidth = $(window).width()-220;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1300) {
+            $scope.videoWidth = $(window).width()-180;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1250) {
+            $scope.videoWidth = $(window).width()-120;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1200) {
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1150) {
+            $scope.videoWidth = $(window).width()-220;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1100) {
+            $scope.videoWidth = $(window).width()-180;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 1050) {
+            $scope.videoWidth = $(window).width()-120;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 992) {
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 4;
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 991) {
+            $scope.videoWidth = $(window).width()-270;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
+            $scope.countBackers = 3;
+        } else if ($(window).width() >= 950) {
+            $scope.videoWidth = $(window).width()-180;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
+            $scope.countBackers = 3;
+        } else if ($(window).width() >= 900) {
+            $scope.videoWidth = $(window).width()-180;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
+            $scope.countBackers = 3;
+        } else if ($(window).width() >= 850) {
+            $scope.videoWidth = $(window).width()-120;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
+            $scope.countBackers = 3;
+        } else if ($(window).width() >= 800) {
+            $scope.videoWidth = $(window).width()-80;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
+            $scope.countBackers = 3;
         } else if ($(window).width() >= 768) {
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countLimit = 3;
             $scope.countBackers = 3;
         } else if ($(window).width() >= 480) {
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
             $scope.countBackers = 2;
-        } else {
+            $scope.countLimit = 1;
+        } else if ($(window).width >= 375){
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
             $scope.countBackers = 1;
+            $scope.countLimit = 1;
+        } else if ($(window).width >= 360){
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countBackers = 1;
+            $scope.countLimit = 1;
+        } else {
+            $scope.videoWidth = $(window).width()-60;
+            document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+            $scope.countBackers = 1;
+            $scope.countLimit = 1;
         }
 
         $(window).on("resize.doResize", function() {
             $scope.$apply(function() {
-                if ($(window).width() >= 992) {
+                if ($(window).width() >= 1366){
+                    $scope.videoWidth = $(window).width()-280;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
                     $scope.countLimit = 4;
-                } else if ($(window).width() >= 768) {
-                    $scope.countLimit = 3;
-                }
-
-                if ($(window).width() >= 992) {
                     $scope.countBackers = 4;
+                } else if ($(window).width() >= 1350) {
+                    $scope.videoWidth = $(window).width()-220;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1300) {
+                    $scope.videoWidth = $(window).width()-180;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1250) {
+                    $scope.videoWidth = $(window).width()-120;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1200) {
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1150) {
+                    $scope.videoWidth = $(window).width()-220;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1100) {
+                    $scope.videoWidth = $(window).width()-180;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 1050) {
+                    $scope.videoWidth = $(window).width()-120;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 992) {
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 4;
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 991) {
+                    $scope.videoWidth = $(window).width()-270;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
+                    $scope.countBackers = 3;
+                } else if ($(window).width() >= 950) {
+                    $scope.videoWidth = $(window).width()-180;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
+                    $scope.countBackers = 3;
+                } else if ($(window).width() >= 900) {
+                    $scope.videoWidth = $(window).width()-180;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
+                    $scope.countBackers = 3;
+                } else if ($(window).width() >= 850) {
+                    $scope.videoWidth = $(window).width()-120;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
+                    $scope.countBackers = 3;
+                } else if ($(window).width() >= 800) {
+                    $scope.videoWidth = $(window).width()-80;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
+                    $scope.countBackers = 3;
                 } else if ($(window).width() >= 768) {
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countLimit = 3;
                     $scope.countBackers = 3;
                 } else if ($(window).width() >= 480) {
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
                     $scope.countBackers = 2;
-                } else {
+                    $scope.countLimit = 1;
+                } else if ($(window).width >= 375){
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
                     $scope.countBackers = 1;
+                    $scope.countLimit = 1;
+                } else if ($(window).width >= 360){
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countBackers = 1;
+                    $scope.countLimit = 1;
+                } else {
+                    $scope.videoWidth = $(window).width()-60;
+                    document.getElementById('videoAR').setAttribute("width", $scope.videoWidth);
+                    $scope.countBackers = 1;
+                    $scope.countLimit = 1;
                 }
             });
         });

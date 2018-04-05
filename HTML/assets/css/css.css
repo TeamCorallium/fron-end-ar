@@ -57,6 +57,10 @@
 }
 
 @media (max-width: 991px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .profile-padding {
         padding-bottom: 0px !important;
     }
@@ -67,6 +71,10 @@
 }
 
 @media (min-width: 768px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .margin-top-53 {
         margin-top: 53px !important;
     }
@@ -377,6 +385,10 @@
 }
 
 @media (min-width: 770px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -447,6 +459,10 @@
 }
 
 @media (min-width: 801px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -517,6 +533,10 @@
 }
 
 @media (min-width: 851px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -591,6 +611,10 @@
 }
 
 @media (min-width: 901px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -670,6 +694,10 @@
 }
 
 @media (min-width: 951px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -749,6 +777,11 @@
 }
 
 @media (min-width: 992px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 800px !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 230px !important;
@@ -860,6 +893,11 @@
 }
 
 @media (min-width: 1001px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 800px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 39% !important;
         margin-top: 40px !important;
@@ -942,6 +980,11 @@
 }
 
 @media (min-width: 1051px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 800px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 40% !important;
         margin-top: 40px !important;
@@ -1028,6 +1071,11 @@
 }
 
 @media (min-width: 1101px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 800px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 41% !important;
         margin-top: 40px !important;
@@ -1114,6 +1162,11 @@
 }
 
 @media (min-width: 1151px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 800px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 42% !important;
         margin-top: 40px !important;
@@ -1279,6 +1332,10 @@
 }
 
 @media (max-width: 767px) {
+    .buttonGoKickstarter {
+        margin-left: 325px !important;
+        width: 120px !important;
+    }
     .marginTop0XS {
         margin-top: 0px !important;
     }
@@ -1601,6 +1658,10 @@
 }
 
 @media (max-width: 480px) {
+    .buttonGoKickstarter {
+        margin-left: 165px !important;
+        width: 120px !important;
+    }
     .BoxXsWidth {
         max-width: 480px !important;
     }
@@ -1785,6 +1846,10 @@
 }
 
 @media (max-width: 415px) {
+    .buttonGoKickstarter {
+        margin-left: 130px !important;
+        width: 120px !important;
+    }
     .BoxXsWidth {
         max-width: 415px !important;
     }
@@ -1972,6 +2037,10 @@
 }
 
 @media (max-width: 375px) {
+    .buttonGoKickstarter {
+        margin-left: 110px !important;
+        width: 120px !important;
+    }
     .BoxXsWidth {
         max-width: 375px !important;
     }
@@ -2159,6 +2228,10 @@
 }
 
 @media (max-width: 360px) {
+    .buttonGoKickstarter {
+        margin-left: 100px !important;
+        width: 120px !important;
+    }
     .BoxXsWidth {
         max-width: 360px !important;
     }
@@ -2346,6 +2419,10 @@
 }
 
 @media (max-width: 320px) {
+    .buttonGoKickstarter {
+        margin-left: 80px !important;
+        width: 120px !important;
+    }
     .marginButtonBuy {
         margin-left: 60px !important;
     }
@@ -2550,6 +2627,11 @@
 }
 
 @media (min-width: 1201px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 900px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 43% !important;
         margin-top: 40px !important;
@@ -2683,6 +2765,11 @@
 }
 
 @media (min-width: 1251px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 900px !important;
+    }
     #floatLogo {
         margin-left: 34% !important;
     }
@@ -2944,6 +3031,11 @@ ul li a.social-ti-foursquare {
 }
 
 @media (min-width: 1301px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 900px !important;
+    }
     .marginExploreUserHidden {
         margin-left: 43% !important;
         margin-top: 40px !important;
@@ -3030,6 +3122,11 @@ ul li a.social-ti-foursquare {
 }
 
 @media (min-width: 1366px) {
+    .buttonGoKickstarter {
+        position: absolute;
+        margin-top: -43px !important;
+        margin-left: 900px !important;
+    }
     .SocialIcon {
         margin-top: 2px !important;
         margin-left: 24.4% !important;
