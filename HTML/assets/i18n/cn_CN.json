@@ -129,7 +129,8 @@
         "CHANGE_COVER": "更改封面",
         "GO_TO_GALLERY": "转到库",
         "GO_TO_AR": "增强现实",
-        "PRESS": "按"
+        "PRESS": "按",
+        "VISIT": "访问"
     },
     "view_profile": {
         "RATING": "评级:",

@@ -62,7 +62,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 900px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -92,7 +92,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -412,7 +412,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -495,7 +495,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -578,7 +578,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -665,7 +665,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -757,7 +757,7 @@
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 680px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -847,6 +847,9 @@
 }
 
 @media (min-width: 992px) {
+    .minHeight265{
+        min-height: 0px !important;
+    }
     .imagePressVistar{
         margin-left: 50px !important;
     }
@@ -855,7 +858,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 800px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -971,6 +974,9 @@
 }
 
 @media (min-width: 1001px) {
+    .minHeight265{
+        min-height: 0px !important;
+    }
     .imagePressVistar{
         margin-left: 50px !important;
     }
@@ -979,7 +985,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 800px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -1066,6 +1072,9 @@
 }
 
 @media (min-width: 1051px) {
+    .minHeight265{
+        min-height: 0px !important;
+    }
     .imagePressVistar{
         margin-left: 60px !important;
     }
@@ -1074,7 +1083,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 800px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -1173,7 +1182,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 800px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -1272,7 +1281,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 800px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -1460,6 +1469,8 @@
         margin-left: 325px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .marginTop0XS {
         margin-top: 0px !important;
@@ -1797,6 +1808,8 @@
         margin-left: 165px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .BoxXsWidth {
         max-width: 480px !important;
@@ -1996,6 +2009,8 @@
         margin-left: 130px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .BoxXsWidth {
         max-width: 415px !important;
@@ -2198,6 +2213,8 @@
         margin-left: 110px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .BoxXsWidth {
         max-width: 375px !important;
@@ -2400,6 +2417,8 @@
         margin-left: 100px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .BoxXsWidth {
         max-width: 360px !important;
@@ -2602,6 +2621,8 @@
         margin-left: 80px !important;
         width: 120px !important;
         padding: 6px 12px !important;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
     }
     .marginButtonBuy {
         margin-left: 60px !important;
@@ -2812,7 +2833,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 900px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -2955,7 +2976,7 @@
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 900px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -3230,7 +3251,7 @@ ul li a.social-ti-foursquare {
     }
     .buttonGoKickstarter {
         position: absolute !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 900px !important;
         padding: 6px 12px !important;
         width: 40px !important;
@@ -3326,7 +3347,7 @@ ul li a.social-ti-foursquare {
     }
     .buttonGoKickstarter {
         position: absolute  !important;
-        margin-top: -43px !important;
+        margin-top: -41px !important;
         margin-left: 900px !important;
         padding: 6px 12px !important;
         width: 40px !important;

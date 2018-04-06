@@ -259,7 +259,8 @@
         "TITLE_GALLERY": "Nuestra galería",
         "TEXT_GALLERY": "Algunas fotos de nuestro equipo de trabajo vistiendo nuestro producto.",
         "LINE_BLUE": "Apoya nuestra campaña de Kickstarter",
-        "BUY": "Comprar"
+        "BUY": "Comprar",
+        "VISIT": "Visitar"
     },
     "admin": {
         "COLOR": "Color",

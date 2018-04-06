@@ -40,12 +40,13 @@
         <div class="container">
             <div class="row">
                 <h2 ng-click="goToLink()" class="text-center pointerHover" data-appears-class="fadeInUp" data-appears-delay="300" translate="home.MEET_TEAM"></h2>
-                <a ng-click="goToLink()" type="button" class="col-xs-12 ButtonRadiusKickstarter btn-primary buttonGoKickstarter">
+                <a ng-click="goToLink()" type="button" class="center col-xs-12 ButtonRadiusKickstarter btn-primary buttonGoKickstarter">
                     <i class="ti-arrow-right"></i>
+                    <label class="textColorWhite margin-bottom-0 pointerHover hidden-sm hidden-md hidden-lg" translate="home.VISIT"></p>
                 </a>
-                <hr />                
+                <hr class="hidden-xs" />
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <video id="videoAR" controls loop>
+                    <video id="videoAR" controls loop poster="./HTML/assets/images/poster_video.png">
                         <source src="./HTML/assets/videos/AR Dirstuff.mp4" type="video/mp4">
                     </video>
                 </div>

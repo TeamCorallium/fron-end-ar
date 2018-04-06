@@ -261,7 +261,8 @@
         "TITLE_GALLERY": "Our Gallery",
         "TEXT_GALLERY": "Just some random pictures of our team wearing our favorite product ever",
         "LINE_BLUE": "Back our Kickstarter campaign",
-        "BUY": "Buy"
+        "BUY": "Buy",
+        "VISIT": "Visit"
     },
     "admin": {
         "COLOR": "Color",
