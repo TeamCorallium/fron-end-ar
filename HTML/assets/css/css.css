@@ -57,9 +57,15 @@
 }
 
 @media (max-width: 991px) {
+    .imagePressXSMarginLeft{
+        margin-left: 12% !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 900px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .profile-padding {
         padding-bottom: 0px !important;
@@ -71,9 +77,25 @@
 }
 
 @media (min-width: 768px) {
+    .imagePressXSMarginLeft{
+        margin-left: 2% !important;
+    }
+    .minHeight265{
+        min-height: 265px !important;
+    }
+    .imagePressVistar{
+        margin-left: 10px !important;
+    }
+    .paddingLeftPress{
+        padding-left: 40px !important;
+        padding-right: 0px !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .margin-top-53 {
         margin-top: 53px !important;
@@ -385,9 +407,15 @@
 }
 
 @media (min-width: 770px) {
+    .imagePressVistar{
+        margin-left: 13px !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -459,9 +487,18 @@
 }
 
 @media (min-width: 801px) {
+    .imagePressVistar{
+        margin-left: 18px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 4% !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -533,9 +570,18 @@
 }
 
 @media (min-width: 851px) {
+    .imagePressVistar{
+        margin-left: 25px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 7% !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -611,9 +657,18 @@
 }
 
 @media (min-width: 901px) {
+    .imagePressVistar{
+        margin-left: 35px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 9% !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -694,9 +749,18 @@
 }
 
 @media (min-width: 951px) {
+    .imagePressVistar{
+        margin-left: 40px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 11% !important;
+    }
     .buttonGoKickstarter {
-        margin-left: 325px !important;
-        width: 120px !important;
+        position: absolute  !important;
+        margin-top: -43px !important;
+        margin-left: 680px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -776,11 +840,25 @@
     }
 }
 
+@media (min-width: 991px) {
+    .imagePressVistar{
+        margin-left: 50px !important;
+    }
+}
+
 @media (min-width: 992px) {
+    .imagePressVistar{
+        margin-left: 50px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 12% !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 800px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .ButtonCarouselPosition {
         position: absolute !important;
@@ -893,10 +971,18 @@
 }
 
 @media (min-width: 1001px) {
+    .imagePressVistar{
+        margin-left: 50px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 12% !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 800px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 39% !important;
@@ -980,10 +1066,18 @@
 }
 
 @media (min-width: 1051px) {
+    .imagePressVistar{
+        margin-left: 60px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 13% !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 800px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 40% !important;
@@ -1071,10 +1165,18 @@
 }
 
 @media (min-width: 1101px) {
+    .imagePressVistar{
+        margin-left: 70px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 15% !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 800px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 41% !important;
@@ -1162,10 +1264,18 @@
 }
 
 @media (min-width: 1151px) {
+    .imagePressVistar{
+        margin-left: 10px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 800px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 42% !important;
@@ -1332,9 +1442,24 @@
 }
 
 @media (max-width: 767px) {
+    .imagePressVistar{
+        margin-left: 10px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 9% !important;
+    }
+    .marginLeftPressText{
+        margin-left: -5px !important;
+        word-wrap: break-word !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 325px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .marginTop0XS {
         margin-top: 0px !important;
@@ -1658,9 +1783,20 @@
 }
 
 @media (max-width: 480px) {
+    .imagePressVistar{
+        margin-left: 60px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 13% !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 20% !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 165px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .BoxXsWidth {
         max-width: 480px !important;
@@ -1846,9 +1982,20 @@
 }
 
 @media (max-width: 415px) {
+    .imagePressVistar{
+        margin-left: 40px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 9% !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 20% !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 130px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .BoxXsWidth {
         max-width: 415px !important;
@@ -2037,9 +2184,20 @@
 }
 
 @media (max-width: 375px) {
+    .imagePressVistar{
+        margin-left: 25px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 5% !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 20% !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 110px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .BoxXsWidth {
         max-width: 375px !important;
@@ -2228,9 +2386,20 @@
 }
 
 @media (max-width: 360px) {
+    .imagePressVistar{
+        margin-left: 20px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 5% !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 20% !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 100px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .BoxXsWidth {
         max-width: 360px !important;
@@ -2419,9 +2588,20 @@
 }
 
 @media (max-width: 320px) {
+    .imagePressVistar{
+        margin-left: 5px !important;
+    }
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
+    .marginLeftPressImage{
+        margin-left: 20% !important;
+    }
     .buttonGoKickstarter {
+        position: relative !important;
         margin-left: 80px !important;
         width: 120px !important;
+        padding: 6px 12px !important;
     }
     .marginButtonBuy {
         margin-left: 60px !important;
@@ -2627,10 +2807,15 @@
 }
 
 @media (min-width: 1201px) {
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 900px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 43% !important;
@@ -2765,10 +2950,15 @@
 }
 
 @media (min-width: 1251px) {
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 900px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     #floatLogo {
         margin-left: 34% !important;
@@ -3019,6 +3209,10 @@ ul li a.social-ti-foursquare {
     margin-top: 5px !important;
 }
 
+.ButtonRadiusKickstarter {
+    border-radius: 4px !important;
+}
+
 @media (min-width: 1251px) {
     .SocialIcon {
         margin-top: 2px !important;
@@ -3031,10 +3225,15 @@ ul li a.social-ti-foursquare {
 }
 
 @media (min-width: 1301px) {
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute !important;
         margin-top: -43px !important;
         margin-left: 900px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .marginExploreUserHidden {
         margin-left: 43% !important;
@@ -3122,10 +3321,15 @@ ul li a.social-ti-foursquare {
 }
 
 @media (min-width: 1366px) {
+    .imagePressXSMarginLeft{
+        margin-left: 0px !important;
+    }
     .buttonGoKickstarter {
-        position: absolute;
+        position: absolute  !important;
         margin-top: -43px !important;
         margin-left: 900px !important;
+        padding: 6px 12px !important;
+        width: 40px !important;
     }
     .SocialIcon {
         margin-top: 2px !important;
@@ -4350,7 +4554,6 @@ p:hover .showTextHover {
     width: 120px !important;
     height: 110px !important;
     padding: 0 !important;
-    margin-left: 10px !important;
 }
 
 .imagePressEnganchate{
@@ -4405,9 +4608,4 @@ p:hover .showTextHover {
     padding: 0 !important;
     margin-top: 20px !important;
     margin-bottom: 20px !important;
-}
-
-.padding-left-70{
-    padding-left: 70px !important;
-    padding-right: 0px !important;
 }
